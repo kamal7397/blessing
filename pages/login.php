@@ -1,7 +1,7 @@
 <?php
 if(isset($_SESSION['username']))
 {
-	header('location:index.php?pg=dashboard');
+	header('location:./admin/index.php?pg=profile');
 }
 
 ?>
