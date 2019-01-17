@@ -25,6 +25,7 @@ include 'include/links.php';
 		break;
 
 
+
 		default;
 		include 'pages/profile.php';
 	}

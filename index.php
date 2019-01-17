@@ -19,7 +19,7 @@ include 'include/links.php';
 
 		  ?>
 	</title>
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 </head>
 	<body>
 	
@@ -56,6 +56,11 @@ include 'include/links.php';
 		case 'dashboard':
 		include 'pages/dashboard.php';
 		break;
+
+		case 'prayer':
+		include 'pages/prayer_form.php';
+		break;
+
 
 
 		default;

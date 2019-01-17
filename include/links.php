@@ -40,6 +40,18 @@ insertdata("users","name,username,password","'$name','$username','$password'");
 }
 
 
+if(isset($_POST['prayer']))
+{
+$name=$_POST['name'];
+$dob=$_POST['dob'];
+$address=$_POST['address'];
+$fname=$_POST['fname'];
+$contact=$_POST['contact'];
+$request=$_POST['request'];
+insertdata("prayer_request","name,dob,address,fname,contact,request","'$name','$dob','$address','$fname','$contact','$request'");
+}
+
+
 ?>
 
 
