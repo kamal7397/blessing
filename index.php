@@ -1,5 +1,3 @@
-
-
 <?php
 include 'include/connect.php';
 include 'include/functions.php';
@@ -29,6 +27,7 @@ include 'include/links.php';
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="assets/css/custom/owl.carousel.min.js"></script>
 </head>
 	<body>
 	
@@ -38,7 +37,20 @@ include 'include/links.php';
 	{
 	switch($_GET['pg']){
 		case 'home':
-		include 'pages/home.php';
+			include 'pages/blessingcarousel.php';
+			include 'pages/upcomingevents.php';
+			include 'pages/transforminglive.php';
+			include 'pages/aboutthechurch.php';
+			include 'pages/latestsermons.php';
+			include 'pages/takemetochurch.php';
+			include 'pages/latestblogs.php';
+			include 'pages/gallery.php';
+		
+
+
+
+
+
 		break;
 
 	 	case 'about':
@@ -85,4 +97,85 @@ include 'include/links.php';
 	?>
 	
 	</body>
+
+
+<script>
+
+$('#banner').owlCarousel({
+	animateOut: 'fadeOut',
+animateIn: 'fadeIn',
+    loop:true,
+   autoplay:true,
+    autoplayTimeout:2000,
+    autoplayHoverPause:true,
+
+    responsive:{
+        0:{
+            items:1,
+	    
+        },
+        600:{
+            items:1,
+	
+},
+        1000:{
+            items:1,
+	 
+      }
+    }
+});
+
+
+
+
+
+
+
+
+var owl = $('#first');
+owl.owlCarousel({
+loop:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        }
+    }
+});
+$('.play').on('click',function(){
+    owl.trigger('play.owl.autoplay',[1000])
+});
+$('.stop').on('click',function(){
+    owl.trigger('stop.owl.autoplay')
+});
+
+
+
+
+
+
+
+
+var owl = $('#second');
+owl.owlCarousel({
+loop:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        }
+    }
+});
+$('.play').on('click',function(){
+    owl.trigger('play.owl.autoplay',[1000])
+});
+$('.stop').on('click',function(){
+    owl.trigger('stop.owl.autoplay')
+});
+</script>
+
 </html>
