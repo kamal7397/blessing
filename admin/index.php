@@ -24,6 +24,11 @@ include 'include/links.php';
 		include 'pages/profile.php';
 		break;
 
+		case 'prayers':
+		include 'pages/prayers.php';
+		break;
+
+
 
 
 		default;
