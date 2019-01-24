@@ -24,6 +24,7 @@ include 'include/links.php';
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 <link href="assets/css/custom/style.css" rel="stylesheet">
+<link href="assets/css/custom/owl.carousel.min.css" rel="stylesheet">
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
@@ -103,7 +104,7 @@ include 'include/links.php';
 
 $('#banner').owlCarousel({
 	animateOut: 'fadeOut',
-animateIn: 'fadeIn',
+	animateIn: 'fadeIn',
     loop:true,
    autoplay:true,
     autoplayTimeout:2000,
@@ -116,8 +117,7 @@ animateIn: 'fadeIn',
         },
         600:{
             items:1,
-	
-},
+	},
         1000:{
             items:1,
 	 
@@ -126,14 +126,7 @@ animateIn: 'fadeIn',
 });
 
 
-
-
-
-
-
-
-var owl = $('#first');
-owl.owlCarousel({
+$('#first').owlCarousel({
 loop:true,
     responsive:{
         0:{
@@ -152,14 +145,7 @@ $('.stop').on('click',function(){
 });
 
 
-
-
-
-
-
-
-var owl = $('#second');
-owl.owlCarousel({
+$('#second').owlCarousel({
 loop:true,
     responsive:{
         0:{
@@ -170,12 +156,7 @@ loop:true,
         }
     }
 });
-$('.play').on('click',function(){
-    owl.trigger('play.owl.autoplay',[1000])
-});
-$('.stop').on('click',function(){
-    owl.trigger('stop.owl.autoplay')
-});
+
 </script>
 
 </html>
