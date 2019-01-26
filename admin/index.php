@@ -1,3 +1,30 @@
+
+<html>
+<head>
+	<title>
+		<?php if(isset($_GET['pg']))
+			{
+				echo $_GET['pg'];			
+			}
+			else
+			{
+				echo "Home ";
+			}
+
+		  ?>
+	</title>
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+<link href="../assets/css/custom/owl.carousel.min.css" rel="stylesheet">
+<link href="../assets/css/custom/style.css" rel="stylesheet">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="../assets/css/custom/owl.carousel.min.js"></script>
+</head>
+
 <?php ob_start();
 session_start();
 
@@ -17,8 +44,15 @@ include 'include/links.php';
 	{
 	switch($_GET['pg']){
 		case 'home':
-		include 'pages/home.php';
-		break;
+			include 'pages/blessingcarousel.php';
+			include 'pages/upcomingevents.php';
+			include 'pages/transforminglive.php';
+			include 'pages/aboutthechurch.php';
+			include 'pages/latestsermons.php';
+			include 'pages/takemetochurch.php';
+			include 'pages/latestblogs.php';
+			include 'pages/gallery.php';
+		
 		
 		case 'profile':
 		include 'pages/profile.php';
