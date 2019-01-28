@@ -17,7 +17,7 @@
         <a class="nav-link" href="index.php?pg=about">About</a>
       </li>    
       <li class="nav-item">
-        <a class="nav-link" href="index.php?pg=prayer">PrayerRequest</a>
+        <a class="nav-link" href="index.php?pg=prayers">Prayers</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="index.php?pg=gallery">Gallery</a>
@@ -33,4 +33,3 @@
 </form>	
 
  </div>
-<h1>welcome <?php echo $_SESSION['username'] ;  ?></h1>

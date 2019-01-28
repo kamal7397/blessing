@@ -1,5 +1,38 @@
 
 <div class="container">
+
+<?php
+if(isset($_GET['status']))
+{
+?>
+<div class="row mt-5">
+	<div class="col-md-12">
+
+		<?php
+		if($_GET['status']==1)
+		{
+		?>
+		<div class="alert alert-success">
+			<p>Request Submitted</p>
+		</div>
+		<?php
+		}
+		else
+		{
+		?>
+		<div class="alert alert-danger">
+			<p>!Request Not Submitted</p>
+		</div>
+		<?php
+		}
+		?>
+	</div>
+</div>
+<?php
+}
+?>
+
+
 <div class="row mt-5 mb-5">
 <div class="col-md-12">
 <form method="post">
@@ -74,3 +107,8 @@
 </div>
 </div>
 </div>
+
+
+
+
+

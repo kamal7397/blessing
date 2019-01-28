@@ -1,13 +1,17 @@
 <?php
-	function insertdata($tbname,$columns,$value)
+	function insertdata($tbname,$columns,$value, $loc,$locError)
 	{
 		$insertqry="insert into $tbname($columns) values($value)";
 		$result=mysqli_query($GLOBALS['con'],$insertqry) or die(mysqli_error($GLOBALS['con']));
 			if($result)
 			{
-				echo "value inserted";
+				header('location:'.$loc);
 			}
-		return $result;
+			else
+			{
+				header('location:'.$locError);
+			}
+	return $result;	
 	}
 
 	//insertdata("register","name","description");

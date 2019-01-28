@@ -48,7 +48,7 @@ $address=$_POST['address'];
 $fname=$_POST['fname'];
 $contact=$_POST['contact'];
 $request=$_POST['request'];
-insertdata("prayer","name,dob,address,fname,contact,request","'$name','$dob','$address','$fname','$contact','$request'");
+insertdata("prayer","name,dob,address,fname,contact,request","'$name','$dob','$address','$fname','$contact','$request'","index.php?pg=prayer&status=1","index.php?pg=prayer&status=0");
 }
 
 
