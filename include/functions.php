@@ -78,23 +78,16 @@
 
 
 
-	function selectdatacon($tbname,$where,$user,$password)
-	{
+	function selectdatacon($col,$tbname,$where)
+	{ 
 		
-		$selectqry="select $tbname where $where";
+		$selectqry="select $col from $tbname where $where";
 		$result=mysqli_query($GLOBALS['con'],$selectqry) or die(mysqli_error($GLOBALS['con']));
-			if($result)
-			{
-				header('location:'.$user);
-			}
-			else
-			{
-				header('location:'.$password);
-			}
+			
 	return $result;
 	}
 
-	//selectdata("*", "register");
+	//selectdata("*", "register","username =$_post['username'] and ");
 ?>
 
 

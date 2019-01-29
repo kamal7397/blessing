@@ -26,9 +26,8 @@ include 'include/links.php';
 <link href="assets/css/custom/style.css" rel="stylesheet">
 <link href="assets/css/custom/owl.carousel.min.css" rel="stylesheet">
 
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<script src="assets/css/custom/owl.carousel.min.js"></script>
+
+
 </head>
 	<body>
 	
@@ -98,7 +97,9 @@ include 'include/links.php';
 	?>
 	
 	</body>
-
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="assets/css/custom/owl.carousel.min.js"></script>
 
 <script>
 

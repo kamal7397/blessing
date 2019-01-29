@@ -26,6 +26,8 @@ if(isset($_GET['status']))
 		<?php
 		}
 		?>
+
+
 	</div>
 </div>
 <?php

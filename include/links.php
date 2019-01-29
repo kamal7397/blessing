@@ -8,28 +8,28 @@ if(isset($_POST['login']))
 {
 $username=$_POST['username'];
 $password=$_POST['password'];
-$result=selectdatacon("users","$username","index.php?pg=login&username=0","index.php?pg=login&password=1");
+$result=selectdatacon("*","users","username = '$username'");
 if(mysqli_num_rows($result)>0)
 {
-echo "user exists";
-$row=mysqli_fetch_assoc($result);
-echo $row['username'];
+
+	$row=mysqli_fetch_assoc($result);
+
 	if($row['password']==md5($password))
 	{
 	$_SESSION['username']=$row['username'];
 	$_SESSION['name']=$row['name'];
-	echo $_SESSION['name'];	
+	
 	
 	header('location:./admin/index.php?pg=profile');
 	}
 	else
 	{
-	echo "invalid password";
+	header('location:index.php?pg=login&userStatus=1&passStatus=0');
 	}
 }
 else
 {
-echo "user doesn't exist";
+	header('location:index.php?pg=login&userStatus=0');
 }
 }
 if(isset($_POST['register']))
