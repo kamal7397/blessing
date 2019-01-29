@@ -4,10 +4,11 @@ session_start();
 
 
 
-if(isset($_POST['login'])){
+if(isset($_POST['login']))
+{
 $username=$_POST['username'];
 $password=$_POST['password'];
-$result=selectdata("*","users");
+$result=selectdatacon("users","$username","index.php?pg=login&username=0","index.php?pg=login&password=1");
 if(mysqli_num_rows($result)>0)
 {
 echo "user exists";

@@ -73,6 +73,28 @@
 	}
 
 	//selectdata("*", "register");
+
+
+
+
+
+	function selectdatacon($tbname,$where,$user,$password)
+	{
+		
+		$selectqry="select $tbname where $where";
+		$result=mysqli_query($GLOBALS['con'],$selectqry) or die(mysqli_error($GLOBALS['con']));
+			if($result)
+			{
+				header('location:'.$user);
+			}
+			else
+			{
+				header('location:'.$password);
+			}
+	return $result;
+	}
+
+	//selectdata("*", "register");
 ?>
 
 
