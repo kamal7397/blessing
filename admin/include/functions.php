@@ -64,6 +64,16 @@
 	return $result;
 	}
 
+
+	function selectdatacon($col,$tbname,$where)
+	{ 
+		
+		$selectqry="select $col from $tbname where $where";
+		$result=mysqli_query($GLOBALS['con'],$selectqry) or die(mysqli_error($GLOBALS['con']));
+			
+	return $result;
+	}
+
 	//selectdata("*", "register");
 ?>
 

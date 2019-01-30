@@ -61,7 +61,9 @@ include 'include/links.php';
 		include 'pages/prayers.php';
 		break;
 
-
+		case 'updatePrayer':
+		include 'pages/updatePrayer.php';
+		break;
 
 
 		default;

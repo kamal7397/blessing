@@ -21,6 +21,7 @@
 <th>FNAME</th>
 <th>CONTACT</th>
 <th>REQUEST</th>
+<th>Edit</th>
 </tr>
 </thead>
 <tbody>
@@ -38,6 +39,7 @@ while($row=mysqli_fetch_assoc($result))
 <td><?php  echo $row['fname'];  ?></td>
 <td><?php echo $row['contact'];  ?></td>
 <td><?php  echo $row['request']; ?></td>
+<td><a href="index.php?pg=updatePrayer&id=<?php echo $row['id']; ?>"><i class="fa fa-edit"></i></a></td>
 </tr>
 <?php
 
