@@ -36,17 +36,15 @@
 
 
 
-	function deletedata($tbname,$where)
+	function deletedata($tbname,$where,$loc)
 	{
-		
-		$deleteqry="delete $tbname where $where";
+		$deleteqry="delete from $tbname where $where";
 		$result=mysqli_query($GLOBALS['con'],$deleteqry) or die(mysqli_error($GLOBALS['con']));
-			if($result)
-			{
-				echo "value deleted";
-			}
+		if($result)
+		{
+			header('location:'.$loc);
+		}
 	}
-
 	//deletedata("register", "firstname=kamal");
 
 
@@ -69,9 +67,8 @@
 	{ 
 		
 		$selectqry="select $col from $tbname where $where";
-		$result=mysqli_query($GLOBALS['con'],$selectqry) or die(mysqli_error($GLOBALS['con']));
-			
-	return $result;
+		$result=mysqli_query($GLOBALS['con'],$selectqry) or die(mysqli_error($GLOBALS['con']));	
+		return $result;
 	}
 
 	//selectdata("*", "register");
