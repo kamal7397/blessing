@@ -12,7 +12,7 @@ $address=$_POST['address'];
 $fname=$_POST['fname'];
 $contact=$_POST['contact'];
 $request=$_POST['request'];
-updatedata("prayer", "name = '".$name."',dob = '".$dob."',address = '".$address."',fname = '".$fname."',contact = '".$contact."',request = '".$request."'", "id = ".$_GET['id']);
+updatedata("prayer", "name = '".$name."',dob = '".$dob."',address = '".$address."',fname = '".$fname."',contact = '".$contact."',request = '".$request."'","id = ".$_GET['id']);
 }
 
 
@@ -21,6 +21,14 @@ if(isset($_GET['delete']))
 {
 $id=$_GET['id'];
 deletedata("prayer","id=".$id,"index.php?pg=prayers");
+}
+
+
+if(isset($_GET['updatePrayerStatus']))
+{
+$id=$_GET['id'];
+updatedata("prayer","status='Completed'","id=".$_GET['id']);
+header('location:?pg=prayers');
 }
 ?>
 
