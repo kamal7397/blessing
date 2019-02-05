@@ -25,6 +25,9 @@
 	<li class="nav-item">
         <a class="nav-link" href="index.php?pg=login">Login</a>
       </li>
+	<li class="nav-item">
+        <a class="nav-link" href="index.php?pg=track">Track</a>
+      </li>
     </ul>
   </div>  
 </nav>

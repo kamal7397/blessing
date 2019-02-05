@@ -21,6 +21,7 @@
 <th>FNAME</th>
 <th>CONTACT</th>
 <th>REQUEST</th>
+<th>UID</th>
 <th>STATUS</th>
 <th>EDIT</th>
 </tr>
@@ -40,6 +41,7 @@ while($row=mysqli_fetch_assoc($result))
 <td><?php  echo $row['fname'];  ?></td>
 <td><?php echo $row['contact'];  ?></td>
 <td><?php  echo $row['request']; ?></td>
+<td><?php  echo $row['uid']; ?></td>
 <td>
 <form>
 <input type="hidden" value="<?php echo $row['id']; ?>" name="id">

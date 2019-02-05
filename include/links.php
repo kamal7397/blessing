@@ -49,13 +49,18 @@ $address=$_POST['address'];
 $fname=$_POST['fname'];
 $contact=$_POST['contact'];
 $request=$_POST['request'];
-insertdata("prayer","name,dob,address,fname,contact,request","'$name','$dob','$address','$fname','$contact','$request'","index.php?pg=prayer&status=1","index.php?pg=prayer&status=0");
+$uid='POPWA'.mt_rand(1000,9999);
+insertdata("prayer","name,dob,address,fname,contact,request,uid","'$name','$dob','$address','$fname','$contact','$request','$uid'","index.php?pg=prayer&status=1&uid=".$uid,"index.php?pg=prayer&status=0");
 }
 
 
 
 
-
+if(isset($_POST['track_prayer']))
+{
+$uid=$_POST['uid'];
+header('location:index.php?pg=track_status&uid='.$uid);
+}
 
 
 ?>

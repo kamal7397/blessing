@@ -81,7 +81,15 @@ include 'include/links.php';
 		case 'prayer':
 		include 'pages/prayer_form.php';
 		break;
-
+		
+		case 'track':
+		include 'pages/track.php';
+		break;
+		
+		
+		case 'track_status':
+		include 'pages/track_status.php';
+		break;
 
 
 		default;

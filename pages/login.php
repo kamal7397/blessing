@@ -82,7 +82,7 @@ if(isset($_GET['passStatus']))
 </div>
 </div>
 <div class="form-group">
-<input type="submit" name="login" value="submit" class="form-control btn btn-primary">
+<input type="submit" name="login" value="Submit" class="form-control btn btn-primary">
 </div>
 </div>
 <div class="col-md-3">
