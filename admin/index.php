@@ -65,6 +65,9 @@ include 'include/links.php';
 		include 'pages/updatePrayer.php';
 		break;
 
+		case 'gallery':
+		include 'pages/gallery.php';
+		break;
 
 		default;
 		include 'pages/profile.php';
