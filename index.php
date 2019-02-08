@@ -1,3 +1,5 @@
+
+
 <?php
 include 'include/connect.php';
 include 'include/functions.php';
@@ -55,6 +57,10 @@ include 'include/links.php';
 
 	 	case 'about':
 		include 'pages/about.php';
+		break;
+
+		case 'gallery':
+		include 'pages/gallery.php';
 		break;
 
 

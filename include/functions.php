@@ -65,10 +65,7 @@
 		
 		$selectqry="select $col from $tbname ";
 		$result=mysqli_query($GLOBALS['con'],$selectqry) or die(mysqli_error($GLOBALS['con']));
-			if($result)
-			{
-				echo "value selected";
-			}
+			
 	return $result;
 	}
 
