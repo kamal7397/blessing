@@ -67,8 +67,8 @@ include 'include/links.php';
 		break;
 
 
-		case 'contact':
-		include 'pages/contact.php';
+		case 'sermons':
+		include 'pages/sermons.php';
 		break;
 
 		case 'service':

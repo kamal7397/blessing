@@ -11,7 +11,7 @@
         <a class="nav-link" href="index.php?pg=home">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="index.php?pg=contact">Contact</a>
+        <a class="nav-link" href="index.php?pg=sermons">Sermons</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="index.php?pg=about">About</a>
@@ -28,8 +28,8 @@
 </div>
 
 
-<form method="post" class="mt-5 ml-5 ">
-<input type="submit" class="bg-dark pt-1 pb-2 px-4" name="logout" value="Logout">
+<form method="post" class=" ml-5 ">
+<input type="submit" class="bg-dark pt-1 pb-2 px-4 btn_look" name="logout" value="Logout">
 </form>	
 
  </div>

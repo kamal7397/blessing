@@ -11,7 +11,7 @@
         <a class="nav-link" href="index.php?pg=home">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="index.php?pg=contact">Contact</a>
+        <a class="nav-link" href="index.php?pg=sermons">Sermons</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="index.php?pg=about">About</a>

@@ -27,7 +27,9 @@ deletedata("prayer","id=".$id,"index.php?pg=prayers");
 if(isset($_GET['delete_image']))
 {
 $id=$_GET['id'];
+echo "../assets/img/gallery/".$_GET['image'];
 deletedata("gallery","id=".$id,"index.php?pg=gallery");
+unlink("../assets/img/gallery/".$_GET['image']);
 }
 
 if(isset($_GET['updatePrayerStatus']))
