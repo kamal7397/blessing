@@ -33,33 +33,25 @@
 <table id="example" class="table table-striped table-bordered" style="width:100%">
 <thead>
 <tr>
-<th>NAME</th>
-<th>IMAGE</th>
-<th>AUTHOR</th>
+<th>AMOUNT</th>
 <th>DATE</th>
-<th>EDIT</th>
+<th>PURPOSE</th>
 </tr>
 </thead>
 <tbody>
 
 <?php
-$result=selectdata("*","gallery");
+$result=selectdata("*","records");
 while($row=mysqli_fetch_assoc($result))
 	{
 
 ?>
 <tr>
-<td><?php  echo $row['name']; ?></td>
-<td><img src="../assets/img/gallery/<?php echo $row['image'];  ?>" height="100px" width="100px;"></td>
+<td><?php  echo $row['amount']; ?></td>
+<td><?php  echo $row['date']; ?></td>
+<td><?php  echo $row['purpose']; ?></td>
 
 
-<td>
-<form>
-<input type="hidden" value="<?php echo $row['id']; ?>" name="id">
-<input type="hidden" value="<?php echo $row['image']; ?>" name="image">
-<button type="submit"  name = "delete_image"  class="btn"><i class="fa fa-trash"></i></button>
-</form>
-</td>
 </tr>
 <?php
 
