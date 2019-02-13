@@ -18,9 +18,9 @@ if(mysqli_num_rows($result)>0)
 	{
 	$_SESSION['username']=$row['username'];
 	$_SESSION['name']=$row['name'];
-	
-	
-	header('location:./admin/index.php?pg=profile');
+	$_SESSION['type']=$row['type'];
+	$_SESSION['userid']=$row['id'];
+	header('location:./users/index.php?pg=profile');	
 	}
 	else
 	{

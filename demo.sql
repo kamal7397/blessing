@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 06, 2019 at 01:31 PM
+-- Generation Time: Feb 13, 2019 at 01:30 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -70,6 +70,28 @@ INSERT INTO `prayer` (`id`, `name`, `dob`, `address`, `fname`, `contact`, `reque
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `records`
+--
+
+CREATE TABLE `records` (
+  `id` int(11) NOT NULL,
+  `amount` varchar(10) NOT NULL,
+  `date` varchar(50) NOT NULL,
+  `purpose` varchar(60) NOT NULL,
+  `type` varchar(30) NOT NULL,
+  `userid` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `records`
+--
+
+INSERT INTO `records` (`id`, `amount`, `date`, `purpose`, `type`, `userid`) VALUES
+(1, '6000', '2019-02-08', 'construction', 'donation', 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -77,15 +99,18 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `name` varchar(20) NOT NULL,
   `username` varchar(20) NOT NULL,
-  `password` varchar(100) NOT NULL
+  `password` varchar(100) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `contact` varchar(13) NOT NULL,
+  `type` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `username`, `password`) VALUES
-(1, 'kamal', 'kamaljeet', 'aa63b0d5d950361c05012235ab520512');
+INSERT INTO `users` (`id`, `name`, `username`, `password`, `address`, `contact`, `type`) VALUES
+(1, 'kamal', 'kamaljeet', 'aa63b0d5d950361c05012235ab520512', '', '', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -102,6 +127,13 @@ ALTER TABLE `gallery`
 --
 ALTER TABLE `prayer`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `records`
+--
+ALTER TABLE `records`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `userid` (`userid`);
 
 --
 -- Indexes for table `users`
@@ -126,10 +158,26 @@ ALTER TABLE `prayer`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT for table `records`
+--
+ALTER TABLE `records`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `records`
+--
+ALTER TABLE `records`
+  ADD CONSTRAINT `records_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

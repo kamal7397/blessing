@@ -32,10 +32,10 @@ include 'include/functions.php';
 include 'include/links.php';
 
 	if(!isset($_SESSION['username'])){
-		header('location:../index.php?pg=login');	
+		header('location:../index.php?pg=login');
 	}
-	if($_SESSION['type']=="users"){
-		header('location:../users/index.php?pg=profile');
+	if($_SESSION['type']=="admin"){
+		header('location:../admin/index.php?pg=profile');
 	}
 
 
@@ -52,8 +52,8 @@ include 'include/links.php';
 		include 'pages/profile.php';
 		break;
 
-		case 'sermons':
-		include 'pages/sermons.php';
+		case 'donation':
+		include 'pages/donation.php';
 		break;
 
 		case 'prayers':
