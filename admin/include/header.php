@@ -22,6 +22,9 @@
       <li class="nav-item">
         <a class="nav-link" href="index.php?pg=gallery">Gallery</a>
       </li>
+	      <li class="nav-item">
+        <a class="nav-link" href="index.php?pg=donation">Donation</a>
+      </li>
     </ul>
   </div>  
 </nav>

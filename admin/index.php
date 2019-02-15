@@ -56,6 +56,10 @@ include 'include/links.php';
 		include 'pages/sermons.php';
 		break;
 
+		case 'donation':
+		include 'pages/donation.php';
+		break;
+
 		case 'prayers':
 		include 'pages/prayers.php';
 		break;

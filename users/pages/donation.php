@@ -29,7 +29,7 @@
 <div class="container">
 <div class="row mt-3">
 <div class="col-md-8 offset-2">
-<h3 class="text-center mt-3 mb-3">Sermons List</h3>
+<h3 class="text-center mt-3 mb-3">Donation History</h3>
 <table id="example" class="table table-striped table-bordered" style="width:100%">
 <thead>
 <tr>
@@ -41,7 +41,7 @@
 <tbody>
 
 <?php
-$result=selectdata("*","records");
+$result=selectdatacon("*","records","userid =".$_SESSION['userid']);
 while($row=mysqli_fetch_assoc($result))
 	{
 

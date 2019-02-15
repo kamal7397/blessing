@@ -58,7 +58,7 @@ if(isset($_GET['passStatus']))
 </div>
 
 <div class="container">
-<div class="row mt-2 mb-5">
+<div class="row mt-2 ">
 <div class="col-md-3">
 </div>
 <div class="col-md-6">
@@ -89,4 +89,9 @@ if(isset($_GET['passStatus']))
 </div>
 </div>
 </form>
+<div class="row mb-5">
+<div class="col-md-12 text-center">
+<p>Not Registered? <a href="index.php?pg=register" >Sign up</a></p>
+</div>
+</div>
 </div>

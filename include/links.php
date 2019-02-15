@@ -37,7 +37,9 @@ if(isset($_POST['register']))
 $name=$_POST['name'];
 $username=$_POST['username'];
 $password=md5($_POST['password']);
-insertdata("users","name,username,password","'$name','$username','$password'");
+$address=$_POST['address'];
+$contact=$_POST['contact'];
+insertdata("users","name,username,password,address,contact,type","'$name','$username','$password','$address','$contact','users'","index.php?pg=register&status=1","index.php?pg=register&status=1");
 }
 
 
