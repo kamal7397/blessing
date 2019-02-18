@@ -91,5 +91,22 @@ if ($uploadOk == 0) {
     }
 }
 }
+
+
+
+
+
+
+if(isset($_POST['donation']))
+{
+$amount=$_POST['amount'];
+$date=$_POST['date'];
+$purpose=$_POST['purpose'];
+$rec_type=$_POST['rec_type'];
+insertdata("records","amount,date,purpose, userid, type","'".$amount."','".$date."','".$purpose."',".$_SESSION['userid'].",'$rec_type'");
+
+}
+
+
 ?>
 

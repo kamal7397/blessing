@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 15, 2019 at 01:13 PM
+-- Generation Time: Feb 18, 2019 at 01:44 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -87,7 +87,9 @@ CREATE TABLE `records` (
 --
 
 INSERT INTO `records` (`id`, `amount`, `date`, `purpose`, `type`, `userid`) VALUES
-(1, '6000', '2019-02-08', 'construction', 'donation', 1);
+(1, '6000', '2019-02-08', 'construction', 'expense', 1),
+(2, '1000', '2019-02-01', 'construction', 'donation', 2),
+(3, '1000', '2019-02-09', 'construction', 'expense', 3);
 
 -- --------------------------------------------------------
 
@@ -110,9 +112,37 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `password`, `address`, `contact`, `type`) VALUES
-(1, 'kamal', 'kamaljeet', 'aa63b0d5d950361c05012235ab520512', '', '', 'users'),
+(1, 'kamal', 'kamaljeet', 'aa63b0d5d950361c05012235ab520512', 'njjmhjkhkl', '9856985694', 'users'),
 (2, 'honey', 'honey', 'b60eb83bf533eecf1bde65940925a981', 'hghsdghsg', '9856985698', 'users'),
 (3, 'Admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin', '8888888888', 'admin');
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `user_records`
+-- (See below for the actual view)
+--
+CREATE TABLE `user_records` (
+`uid` int(11)
+,`name` varchar(20)
+,`username` varchar(20)
+,`address` varchar(100)
+,`contact` varchar(13)
+,`type` varchar(30)
+,`amount` varchar(10)
+,`date` varchar(50)
+,`purpose` varchar(60)
+,`rec_type` varchar(30)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `user_records`
+--
+DROP TABLE IF EXISTS `user_records`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `user_records`  AS  select `users`.`id` AS `uid`,`users`.`name` AS `name`,`users`.`username` AS `username`,`users`.`address` AS `address`,`users`.`contact` AS `contact`,`users`.`type` AS `type`,`records`.`amount` AS `amount`,`records`.`date` AS `date`,`records`.`purpose` AS `purpose`,`records`.`type` AS `rec_type` from (`users` join `records` on((`users`.`id` = `records`.`userid`))) ;
 
 --
 -- Indexes for dumped tables
@@ -163,7 +193,7 @@ ALTER TABLE `prayer`
 -- AUTO_INCREMENT for table `records`
 --
 ALTER TABLE `records`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
