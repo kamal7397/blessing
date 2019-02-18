@@ -46,16 +46,16 @@
 	?>
 <div class="row text-center">
 <div class="col-md-4">
-<p>TOTAL DONATION</p>
-<p><?php echo $donation['donation']; ?></p>
+<p class="mb-0">TOTAL DONATION</p>
+<h5 class="mb-5"><?php echo $donation['donation']; ?></h5>
 </div>
 <div class="col-md-4">
-<p>TOTAL EXPENSE</p>
-<p><?php echo $expense['expense']; ?></p>
+<p class="mb-0">TOTAL EXPENSE</p>
+<h5 class="mb-5"><?php echo $expense['expense']; ?></h5>
 </div>
 <div class="col-md-4">
-<p>CASH IN HAND</p>
-<p><?php echo $donation['donation']-$expense['expense']; ?></p>
+<p class="mb-0">CASH IN HAND</p>
+<h5 class="mb-5"><?php echo $donation['donation']-$expense['expense']; ?></h5>
 </div>
 </div>
 <table id="example" class="table table-striped table-bordered" style="width:100%">
