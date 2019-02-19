@@ -72,16 +72,16 @@
 	?>
 <div class="row text-center">
 <div class="col-md-4">
-<p class="mb-0">TOTAL DONATION</p>
-<h5 class="mb-5"><?php echo $donation['donation']; ?></h5>
+<p class="mb-0 text-success"><strong>TOTAL DONATION</strong></p>
+<h5 class="mb-5"><i class="fas fa-rupee-sign"></i> <?php echo $donation['donation']; ?></h5>
 </div>
 <div class="col-md-4">
-<p class="mb-0">TOTAL EXPENSE</p>
-<h5 class="mb-5"><?php echo $expense['expense']; ?></h5>
+<p class="mb-0 text-danger"><strong>TOTAL EXPENSE</strong></p>
+<h5 class="mb-5"><i class="fas fa-rupee-sign"></i> <?php echo $expense['expense']; ?></h5>
 </div>
 <div class="col-md-4">
-<p class="mb-0">CASH IN HAND</p>
-<h5 class="mb-5"><?php echo $donation['donation']-$expense['expense']; ?></h5>
+<p class="mb-0 text-info"><strong>CASH IN HAND</strong></p>
+<h5 class="mb-5"><i class="fas fa-rupee-sign"></i> <?php echo $donation['donation']-$expense['expense']; ?></h5>
 </div>
 </div>
 <table id="example" class="table table-striped table-bordered" style="width:100%">
