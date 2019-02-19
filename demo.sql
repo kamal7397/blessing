@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 18, 2019 at 01:44 PM
+-- Generation Time: Feb 19, 2019 at 01:28 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -87,9 +87,9 @@ CREATE TABLE `records` (
 --
 
 INSERT INTO `records` (`id`, `amount`, `date`, `purpose`, `type`, `userid`) VALUES
-(1, '6000', '2019-02-08', 'construction', 'expense', 1),
-(2, '1000', '2019-02-01', 'construction', 'donation', 2),
-(3, '1000', '2019-02-09', 'construction', 'expense', 3);
+(4, '1000', '2019-02-19', 'const', 'donation', 3),
+(5, '1000', '2019-02-18', 'const', 'donation', 3),
+(6, '1000', '2019-02-19', 'const', 'expense', 3);
 
 -- --------------------------------------------------------
 
@@ -193,7 +193,7 @@ ALTER TABLE `prayer`
 -- AUTO_INCREMENT for table `records`
 --
 ALTER TABLE `records`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`

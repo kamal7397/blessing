@@ -103,8 +103,33 @@ $amount=$_POST['amount'];
 $date=$_POST['date'];
 $purpose=$_POST['purpose'];
 $rec_type=$_POST['rec_type'];
-insertdata("records","amount,date,purpose, userid, type","'".$amount."','".$date."','".$purpose."',".$_SESSION['userid'].",'$rec_type'");
 
+$res=selectdatacon("sum(amount) as donation","records","type='donation'");
+	$donation = mysqli_fetch_assoc($res);
+
+	$res_expense=selectdatacon("sum(amount) as expense","records","type='expense'");
+	$expense = mysqli_fetch_assoc($res_expense);
+
+$cashinhand=$donation['donation']-$expense['expense'];
+	if($rec_type=='expense')
+        {
+		 if($cashinhand<$amount)
+		{
+			echo "Insufficient amount";
+			header('location:index.php?pg=donation&status=0');
+		}
+		else
+		{
+			insertdata("records","amount,date,purpose, userid, type","'".$amount."','".$date."','".$purpose."',".$_SESSION['userid'].",'$rec_type'");
+			header('location:index.php?pg=donation&status=1');
+		}
+	
+	}
+	else
+	{
+	insertdata("records","amount,date,purpose, userid, type","'".$amount."','".$date."','".$purpose."',".$_SESSION['userid'].",'$rec_type'");
+
+	}
 }
 
 

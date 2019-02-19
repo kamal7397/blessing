@@ -1,6 +1,32 @@
 <div class="container">
 <div class="row">
 <div class="col-md-3">
+<?php
+ if(isset($_GET['status']))
+	{
+		if($_GET['status']==0)
+		{
+		?>
+		<div class="alert alert-danger">
+		<p>you have not sufficient amount to deduct</p>
+		</div>
+		<?php
+		}
+		else
+		{
+		?>
+		<div class="alert alert-success">
+		<p>your  amount is deducted</p>
+		</div>
+		<?php
+		}
+		
+	}
+
+
+?>
+
+
 </div>
 <div class="col-md-6">
 <h3 class="text-center mt-3 mb-3">Donation</h3>
