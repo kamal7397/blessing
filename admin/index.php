@@ -68,6 +68,12 @@ include 'include/links.php';
 		include 'pages/updatePrayer.php';
 		break;
 
+
+		case 'updateRecord':
+		include 'pages/updateRecord.php';
+		break;
+
+
 		case 'gallery':
 		include 'pages/gallery.php';
 		break;

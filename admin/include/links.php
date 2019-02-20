@@ -4,6 +4,7 @@ if(isset($_POST['logout']))
 	session_destroy();
 	header('location:../index.php?pg=login');
 }
+
 if(isset($_POST['prayer']))
 {
 $name=$_POST['name'];
@@ -15,12 +16,29 @@ $request=$_POST['request'];
 updatedata("prayer", "name = '".$name."',dob = '".$dob."',address = '".$address."',fname = '".$fname."',contact = '".$contact."',request = '".$request."'","id = ".$_GET['id']);
 }
 
+if(isset($_POST['updateRecord']))
+{
+$amount=$_POST['amount'];
+$purpose=$_POST['purpose'];
+$date=$_POST['date'];
+$rec_type=$_POST['rec_type'];
+$rid=$_GET['rid'];
+updatedata("records", "amount = '".$amount."',purpose = '".$purpose."',date = '".$date."',type = '".$rec_type."'","id = ".$_GET['rid']);
+}
+
 
 
 if(isset($_GET['delete']))
 {
 $id=$_GET['id'];
 deletedata("prayer","id=".$id,"index.php?pg=prayers");
+}
+
+
+if(isset($_GET['deleterecord']))
+{
+$rid=$_GET['rid'];
+deletedata("records","id=".$rid,"index.php?pg=donation");
 }
 
 

@@ -70,6 +70,8 @@
 	$res_expense=selectdatacon("sum(amount) as expense","records","type='expense'");
 	$expense = mysqli_fetch_assoc($res_expense);
 	?>
+</div>
+</div>
 <div class="row text-center">
 <div class="col-md-4">
 <p class="mb-0 text-success"><strong>TOTAL DONATION</strong></p>
@@ -97,6 +99,7 @@
 <th>DATE</th>
 <th>PURPOSE</th>
 <th>RECORD TYPE</th>
+<th>EDIT/DELETE</th>
 </tr>
 </thead>
 <tbody>
@@ -118,7 +121,13 @@ while($row=mysqli_fetch_assoc($result))
 <td><?php  echo $row['date']; ?></td>
 <td><?php  echo $row['purpose']; ?></td>
 <td class="<?php if($row['rec_type']=='donation') echo 'text-success'; else echo 'text-danger'; ?>"><?php  echo $row['rec_type']; ?></td>
-
+<td><a href="index.php?pg=updateRecord&rid=<?php echo $row['rid'] ?>"><i class="fa fa-edit"></i></td>
+<td>
+<form>
+<input type="hidden" value="<?php echo $row['rid'];  ?>" name="rid">
+<button type="submit" name="deleterecord" class="btn"><i class="fa fa-trash"></i></button>
+</form>
+</td>
 
 </tr>
 <?php
