@@ -1,4 +1,4 @@
-<div class="row bg-dark">
+<div class="row bg-dark" id="firstRow">
 	<div class="col-md-9 col-xs-12">   
 	<nav class="navbar navbar-expand-md navbar-dark ">
 	<a class="navbar-brand" href="#"> <img src="assets/img/logo.png" class="ml-4 mt-4 img-fluid position1"> </a>
@@ -11,10 +11,10 @@
         <a class="nav-link" href="index.php?pg=home">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="index.php?pg=sermons">Sermons</a>
+        <a class="nav-link scrollLink" href="#sermons">Sermons</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="index.php?pg=about">About</a>
+        <a class="nav-link scrollLink"  href="#about">About</a>
       </li>    
       <li class="nav-item">
         <a class="nav-link" href="index.php?pg=prayer">PrayerRequest</a>

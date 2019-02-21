@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 19, 2019 at 01:28 PM
+-- Generation Time: Feb 21, 2019 at 01:41 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -87,7 +87,7 @@ CREATE TABLE `records` (
 --
 
 INSERT INTO `records` (`id`, `amount`, `date`, `purpose`, `type`, `userid`) VALUES
-(4, '1000', '2019-02-19', 'const', 'donation', 3),
+(4, '1000', '2019-02-19', 'funds', 'donation', 3),
 (5, '1000', '2019-02-18', 'const', 'donation', 3),
 (6, '1000', '2019-02-19', 'const', 'expense', 3);
 
@@ -132,6 +132,7 @@ CREATE TABLE `user_records` (
 ,`amount` varchar(10)
 ,`date` varchar(50)
 ,`purpose` varchar(60)
+,`rid` int(11)
 ,`rec_type` varchar(30)
 );
 
@@ -142,7 +143,7 @@ CREATE TABLE `user_records` (
 --
 DROP TABLE IF EXISTS `user_records`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `user_records`  AS  select `users`.`id` AS `uid`,`users`.`name` AS `name`,`users`.`username` AS `username`,`users`.`address` AS `address`,`users`.`contact` AS `contact`,`users`.`type` AS `type`,`records`.`amount` AS `amount`,`records`.`date` AS `date`,`records`.`purpose` AS `purpose`,`records`.`type` AS `rec_type` from (`users` join `records` on((`users`.`id` = `records`.`userid`))) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `user_records`  AS  select `users`.`id` AS `uid`,`users`.`name` AS `name`,`users`.`username` AS `username`,`users`.`address` AS `address`,`users`.`contact` AS `contact`,`users`.`type` AS `type`,`records`.`amount` AS `amount`,`records`.`date` AS `date`,`records`.`purpose` AS `purpose`,`records`.`id` AS `rid`,`records`.`type` AS `rec_type` from (`users` join `records` on((`users`.`id` = `records`.`userid`))) ;
 
 --
 -- Indexes for dumped tables

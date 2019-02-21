@@ -3,7 +3,7 @@
 latest sermons
 ##################################
 -->
-<div class="row mt-5">
+<div class="row mt-5" id="sermons">
 <div class="col-md-12 text-center mb-5">
 <h2 class="section-heading sec-heading">Latest Sermons</h2><div class="section-heading2"></div>
 </div>

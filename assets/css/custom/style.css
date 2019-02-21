@@ -809,3 +809,13 @@ color:#fff;
 border-radius:10%;
 margin-top:35px;
 }
+
+#backTop
+{
+padding:5px;
+border-radius:50%;
+background-color:#eee;
+position:fixed;
+bottom:30px;
+right:30px;
+}
