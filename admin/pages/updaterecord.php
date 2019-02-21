@@ -1,6 +1,6 @@
 <div class="container">
 <div class="row">
-<div class="col-md-6">
+<div class="col-md-6 offset-3">
 <h3 class="text-center mt-3 mb-3">Donation</h3>
 <form method="post" enctype="multipart/form-data" >
 <div class="form-group">
@@ -21,8 +21,6 @@
 
 <input type="submit" name="updateRecord" value="Update" class="btn btn-block btn-primary"> 
 </form>
-</div>
-<div class="col-md-3">
 </div>
 </div>
 </div>

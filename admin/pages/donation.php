@@ -121,13 +121,17 @@ while($row=mysqli_fetch_assoc($result))
 <td><?php  echo $row['date']; ?></td>
 <td><?php  echo $row['purpose']; ?></td>
 <td class="<?php if($row['rec_type']=='donation') echo 'text-success'; else echo 'text-danger'; ?>"><?php  echo $row['rec_type']; ?></td>
-<td><a href="index.php?pg=updateRecord&rid=<?php echo $row['rid'] ?>"><i class="fa fa-edit"></i></td>
-<td>
+<td class="text-center"><a href="index.php?pg=updateRecord&rid=<?php echo $row['rid'] ?>"><i class="fa fa-edit"></i>
+
 <form>
 <input type="hidden" value="<?php echo $row['rid'];  ?>" name="rid">
 <button type="submit" name="deleterecord" class="btn"><i class="fa fa-trash"></i></button>
 </form>
+
 </td>
+
+
+
 
 </tr>
 <?php

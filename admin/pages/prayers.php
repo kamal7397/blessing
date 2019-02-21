@@ -48,7 +48,7 @@ while($row=mysqli_fetch_assoc($result))
 <button type="submit"  name="updatePrayerStatus"  class="btn"><?php  echo $row['status']; ?></button>
 </form>
 </td>
-<td><a href="index.php?pg=updatePrayer&id=<?php echo $row['id']; ?>"><i class="fa fa-edit"></i></a>
+<td class="text-center"><a href="index.php?pg=updatePrayer&id=<?php echo $row['id']; ?>"><i class="fa fa-edit"></i></a>
 <form>
 <input type="hidden" value="<?php echo $row['id']; ?>" name="id">
 <button type="submit"  name = "delete"  class="btn"><i class="fa fa-trash"></i></button>
