@@ -49,8 +49,7 @@ include 'include/links.php';
 			include 'pages/latestsermons.php';
 			include 'pages/takemetochurch.php';
 			include 'pages/latestblogs.php';
-			include 'pages/gallery.php';
-		
+			
 
 
 

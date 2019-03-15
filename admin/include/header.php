@@ -14,6 +14,9 @@
         <a class="nav-link" href="index.php?pg=sermons">Sermons</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="index.php?pg=testimony">Testimony</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="index.php?pg=about">About</a>
       </li>    
       <li class="nav-item">
@@ -24,6 +27,12 @@
       </li>
 	      <li class="nav-item">
         <a class="nav-link" href="index.php?pg=donation">Donation</a>
+      </li>
+	      <li class="nav-item">
+        <a class="nav-link" href="index.php?pg=event">Events</a>
+      </li>
+	      <li class="nav-item">
+        <a class="nav-link" href="index.php?pg=blog">Blogs</a>
       </li>
     </ul>
   </div>  

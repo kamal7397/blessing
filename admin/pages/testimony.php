@@ -3,7 +3,7 @@
 <div class="col-md-3">
 </div>
 <div class="col-md-6">
-<h3 class="text-center mt-3 mb-3">Add Sermon</h3>
+<h3 class="text-center mt-3 mb-3">Add Testimony</h3>
 <form method="post" enctype="multipart/form-data" >
 <div class="form-group">
 <input type="text" name="name" placeholder="Name" required="required" class="form-control">
@@ -17,7 +17,7 @@
 <div class="form-group">
 <input type="file" name="fileToUpload" class="form-control ">
 </div>
-<input type="submit" name="addsermon" value="Add Sermon" class="btn btn-block btn-primary"> 
+<input type="submit" name="addtestimony" value="Add Testimony" class="btn btn-block btn-primary"> 
 </form>
 </div>
 <div class="col-md-3">
@@ -31,7 +31,7 @@
 <div class="container">
 <div class="row mt-3">
 <div class="col-md-8 offset-2">
-<h3 class="text-center mt-3 mb-3">Sermons List</h3>
+<h3 class="text-center mt-3 mb-3">Testimonials List</h3>
 <table id="example" class="table table-striped table-bordered" style="width:100%">
 <thead>
 <tr>
@@ -45,21 +45,21 @@
 <tbody>
 
 <?php
-$result=selectdata("*","gallery");
+$result=selectdata("*","testimony");
 while($row=mysqli_fetch_assoc($result))
 	{
 
 ?>
 <tr>
 <td><?php  echo $row['name']; ?></td>
-<td><img src="../assets/img/gallery/<?php echo $row['image'];  ?>" height="100px" width="100px;"></td>
+<td><img src="../assets/img/testimony/<?php echo $row['image'];  ?>" height="100px" width="100px;"></td>
 <td><?php echo $row['author']; ?></td>
 <td><?php echo $row['date']; ?></td>
 <td>
 <form>
 <input type="hidden" value="<?php echo $row['id']; ?>" name="id">
 <input type="hidden" value="<?php echo $row['image']; ?>" name="image">
-<button type="submit"  name = "delete_sermon"  class="btn"><i class="fa fa-trash"></i></button>
+<button type="submit"  name = "delete_image_testimony"  class="btn"><i class="fa fa-trash"></i></button>
 </form>
 </td>
 </tr>

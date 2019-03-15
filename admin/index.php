@@ -56,6 +56,10 @@ include 'include/links.php';
 		include 'pages/sermons.php';
 		break;
 
+		case 'testimony':
+		include 'pages/testimony.php';
+		break;
+
 		case 'donation':
 		include 'pages/donation.php';
 		break;
@@ -76,6 +80,15 @@ include 'include/links.php';
 
 		case 'gallery':
 		include 'pages/gallery.php';
+		break;
+
+		case 'event':
+		include 'pages/event.php';
+		break;
+
+
+		case 'blog':
+		include 'pages/blog.php';
 		break;
 
 		default;

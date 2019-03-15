@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 21, 2019 at 01:41 PM
+-- Generation Time: Mar 15, 2019 at 01:44 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -25,6 +25,47 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `blogs`
+--
+
+CREATE TABLE `blogs` (
+  `id` int(11) NOT NULL,
+  `date` varchar(20) NOT NULL,
+  `title` varchar(20) NOT NULL,
+  `description` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `blogs`
+--
+
+INSERT INTO `blogs` (`id`, `date`, `title`, `description`) VALUES
+(1, '2019-03-10', 'rtreer', 'dsd');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `events`
+--
+
+CREATE TABLE `events` (
+  `id` int(11) NOT NULL,
+  `image` varchar(50) NOT NULL,
+  `date` varchar(20) NOT NULL,
+  `title` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `events`
+--
+
+INSERT INTO `events` (`id`, `image`, `date`, `title`) VALUES
+(1, '', '2019-03-03', 'rtreer'),
+(2, '', '2019-03-10', 'rtreer');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `gallery`
 --
 
@@ -39,7 +80,7 @@ CREATE TABLE `gallery` (
 --
 
 INSERT INTO `gallery` (`id`, `name`, `image`) VALUES
-(1, 'sdas', 'pic (1) (3).jpg');
+(3, 'fd', 'Tulips.jpg');
 
 -- --------------------------------------------------------
 
@@ -90,6 +131,49 @@ INSERT INTO `records` (`id`, `amount`, `date`, `purpose`, `type`, `userid`) VALU
 (4, '1000', '2019-02-19', 'funds', 'donation', 3),
 (5, '1000', '2019-02-18', 'const', 'donation', 3),
 (6, '1000', '2019-02-19', 'const', 'expense', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sermons`
+--
+
+CREATE TABLE `sermons` (
+  `id` int(11) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `author` varchar(20) NOT NULL,
+  `date` varchar(20) NOT NULL,
+  `image` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sermons`
+--
+
+INSERT INTO `sermons` (`id`, `name`, `author`, `date`, `image`) VALUES
+(1, 'fd', 'fsd', '2019-03-02', ''),
+(2, 'fd', 'fsd', '2019-03-10', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `testimony`
+--
+
+CREATE TABLE `testimony` (
+  `id` int(11) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `author` varchar(20) NOT NULL,
+  `date` varchar(20) NOT NULL,
+  `image` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `testimony`
+--
+
+INSERT INTO `testimony` (`id`, `name`, `author`, `date`, `image`) VALUES
+(3, 'fd', 'fsd', '2019-03-16', 'Desert.jpg');
 
 -- --------------------------------------------------------
 
@@ -150,6 +234,18 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 
 --
+-- Indexes for table `blogs`
+--
+ALTER TABLE `blogs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `events`
+--
+ALTER TABLE `events`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `gallery`
 --
 ALTER TABLE `gallery`
@@ -169,6 +265,18 @@ ALTER TABLE `records`
   ADD KEY `userid` (`userid`);
 
 --
+-- Indexes for table `sermons`
+--
+ALTER TABLE `sermons`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `testimony`
+--
+ALTER TABLE `testimony`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -179,10 +287,22 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `blogs`
+--
+ALTER TABLE `blogs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `events`
+--
+ALTER TABLE `events`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `prayer`
@@ -195,6 +315,18 @@ ALTER TABLE `prayer`
 --
 ALTER TABLE `records`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `sermons`
+--
+ALTER TABLE `sermons`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `testimony`
+--
+ALTER TABLE `testimony`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
