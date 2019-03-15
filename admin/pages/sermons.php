@@ -30,7 +30,7 @@
 
 <div class="container">
 <div class="row mt-3">
-<div class="col-md-8 offset-2">
+<div class="col-md-12">
 <h3 class="text-center mt-3 mb-3">Sermons List</h3>
 <table id="example" class="table table-striped table-bordered" style="width:100%">
 <thead>
@@ -45,21 +45,21 @@
 <tbody>
 
 <?php
-$result=selectdata("*","gallery");
+$result=selectdata("*","sermons");
 while($row=mysqli_fetch_assoc($result))
 	{
 
 ?>
 <tr>
 <td><?php  echo $row['name']; ?></td>
-<td><img src="../assets/img/gallery/<?php echo $row['image'];  ?>" height="100px" width="100px;"></td>
+<td><img src="../assets/img/sermons/<?php echo $row['image'];  ?>" height="100px" width="100px;"></td>
 <td><?php echo $row['author']; ?></td>
 <td><?php echo $row['date']; ?></td>
-<td>
+<td class="text-center"><a href="index.php?pg=updateSermons&id=<?php echo $row['id'] ?>"><i class="fa fa-edit"></i>
 <form>
 <input type="hidden" value="<?php echo $row['id']; ?>" name="id">
 <input type="hidden" value="<?php echo $row['image']; ?>" name="image">
-<button type="submit"  name = "delete_sermon"  class="btn"><i class="fa fa-trash"></i></button>
+<button type="submit"  name = "delete_image_sermon"  class="btn"><i class="fa fa-trash"></i></button>
 </form>
 </td>
 </tr>

@@ -60,6 +60,14 @@ include 'include/links.php';
 		include 'pages/testimony.php';
 		break;
 
+		case 'updateSermons':
+		include 'pages/updateSermons.php';
+		break;
+
+		case 'updateTestimony':
+		include 'pages/updateTestimony.php';
+		break;
+
 		case 'donation':
 		include 'pages/donation.php';
 		break;
@@ -91,6 +99,15 @@ include 'include/links.php';
 		include 'pages/blog.php';
 		break;
 
+
+		case 'updateEvent':
+		include 'pages/updateEvent.php';
+		break;
+
+
+		case 'updateBlog':
+		include 'pages/updateBlog.php';
+		break;
 		default;
 		include 'pages/profile.php';
 	}

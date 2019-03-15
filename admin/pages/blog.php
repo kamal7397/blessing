@@ -56,7 +56,7 @@ while($row=mysqli_fetch_assoc($result))
 <td><?php echo $row['date']; ?></td>
 <td><?php  echo $row['title']; ?></td>
 <td><?php echo $row['description']; ?></td>
-<td>
+<td class="text-center"><a href="index.php?pg=updateBlog&id=<?php echo $row['id'] ?>"><i class="fa fa-edit"></i>
 <form>
 <input type="hidden" value="<?php echo $row['id']; ?>" name="id">
 <input type="hidden" value="<?php echo $row['image']; ?>" name="image">
