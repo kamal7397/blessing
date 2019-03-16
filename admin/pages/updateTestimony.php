@@ -23,7 +23,10 @@ $row=mysqli_fetch_assoc($result);
 <input placeholder="Date" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" name="date" value="<?php echo $row['date']; ?>">
 </div>
 <div class="form-group">
-<input type="file" name="fileToUpload" class="form-control " value="<?php echo $row['image']; ?>">
+<input type="file" name="fileToUpload" class="form-control ">
+</div>
+<div class="form-group">
+<input type="hidden" name="oldimage" class="form-control " value="<?php echo $row['image']; ?>">
 </div>
 <input type="submit" name="update_testimony" value="Update Testimony" class="btn btn-block btn-primary"> 
 </form>

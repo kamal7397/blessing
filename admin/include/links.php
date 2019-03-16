@@ -33,7 +33,54 @@ if(isset($_POST['update_sermon']))
 $name=$_POST['name'];
 $author=$_POST['author'];
 $date=$_POST['date'];
-updatedata("sermons", "name = '".$name."',author = '".$author."',date = '".$date."'","id = ".$_GET['id']);
+if($_POST['oldimage'] !=""){
+	$oldimage=$_POST['oldimage'];
+	unlink("../assets/img/sermons/".$oldimage);
+}
+
+$target_dir = "../assets/img/sermons/";
+$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$uploadOk = 1;
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+// Check if image file is a actual image or fake image
+
+    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+    if($check !== false) {
+        echo "File is an image - " . $check["mime"] . ".";
+        $uploadOk = 1;
+    } else {
+        echo "File is not an image.";
+        $uploadOk = 0;
+    }
+
+// Check if file already exists
+if (file_exists($target_file)) {
+    echo "Sorry, file already exists.";
+    $uploadOk = 0;
+}
+// Check file size
+if ($_FILES["fileToUpload"]["size"] > 5000000) {
+    echo "Sorry, your file is too large.";
+    $uploadOk = 0;
+}
+// Allow certain file formats
+if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+&& $imageFileType != "gif" ) {
+    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+    $uploadOk = 0;
+}
+// Check if $uploadOk is set to 0 by an error
+if ($uploadOk == 0) {
+    echo "Sorry, your file was not uploaded.";
+// if everything is ok, try to upload file
+} else {
+    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+	updatedata("sermons", "name = '".$name."',author = '".$author."',date = '".$date."',image = '".$_FILES["fileToUpload"]["name"]."'", "id = ".$_GET['id']);
+    } else {
+        echo "Sorry, there was an error uploading your file.";
+    }
+}
 }
 
 
@@ -43,16 +90,111 @@ if(isset($_POST['update_testimony']))
 $name=$_POST['name'];
 $author=$_POST['author'];
 $date=$_POST['date'];
-updatedata("testimony", "name = '".$name."',author = '".$author."',date = '".$date."'","id = ".$_GET['id']);
+
+if($_POST['oldimage'] !=""){
+	$oldimage=$_POST['oldimage'];
+	unlink("../assets/img/testimony/".$oldimage);
 }
+
+$target_dir = "../assets/img/testimony/";
+$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$uploadOk = 1;
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+// Check if image file is a actual image or fake image
+
+    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+    if($check !== false) {
+        echo "File is an image - " . $check["mime"] . ".";
+        $uploadOk = 1;
+    } else {
+        echo "File is not an image.";
+        $uploadOk = 0;
+    }
+
+// Check if file already exists
+if (file_exists($target_file)) {
+    echo "Sorry, file already exists.";
+    $uploadOk = 0;
+}
+// Check file size
+if ($_FILES["fileToUpload"]["size"] > 5000000) {
+    echo "Sorry, your file is too large.";
+    $uploadOk = 0;
+}
+// Allow certain file formats
+if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+&& $imageFileType != "gif" ) {
+    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+    $uploadOk = 0;
+}
+// Check if $uploadOk is set to 0 by an error
+if ($uploadOk == 0) {
+    echo "Sorry, your file was not uploaded.";
+// if everything is ok, try to upload file
+} else {
+    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+	updatedata("testimony", "name = '".$name."',author = '".$author."',date = '".$date."',image = '".$_FILES["fileToUpload"]["name"]."'", "id = ".$_GET['id']);
+    } else {
+        echo "Sorry, there was an error uploading your file.";
+    }
+}
+}
+
 
 
 if(isset($_POST['update_event']))
 {
-$image=$_POST['image'];
 $date=$_POST['date'];
 $title=$_POST['title'];
-updatedata("events", "image = '".$image."',date = '".$date."',title = '".$title."'", "id = ".$_GET['id']);
+if($_POST['oldimage'] !=""){
+	$oldimage=$_POST['oldimage'];
+	unlink("../assets/img/events/".$oldimage);
+}
+
+$target_dir = "../assets/img/events/";
+$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$uploadOk = 1;
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+// Check if image file is a actual image or fake image
+
+    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+    if($check !== false) {
+        echo "File is an image - " . $check["mime"] . ".";
+        $uploadOk = 1;
+    } else {
+        echo "File is not an image.";
+        $uploadOk = 0;
+    }
+
+// Check if file already exists
+if (file_exists($target_file)) {
+    echo "Sorry, file already exists.";
+    $uploadOk = 0;
+}
+// Check file size
+if ($_FILES["fileToUpload"]["size"] > 5000000) {
+    echo "Sorry, your file is too large.";
+    $uploadOk = 0;
+}
+// Allow certain file formats
+if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+&& $imageFileType != "gif" ) {
+    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+    $uploadOk = 0;
+}
+// Check if $uploadOk is set to 0 by an error
+if ($uploadOk == 0) {
+    echo "Sorry, your file was not uploaded.";
+// if everything is ok, try to upload file
+} else {
+    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+	updatedata("events","date = '".$date."',title = '".$title."',image = '".$_FILES["fileToUpload"]["name"]."'", "id = ".$_GET['id']);
+    } else {
+        echo "Sorry, there was an error uploading your file.";
+    }
+}
 }
 
 
@@ -75,10 +217,51 @@ deletedata("prayer","id=".$id,"index.php?pg=prayers");
 
 if(isset($_POST['addevent']))
 {
-$image=$_POST['image'];
 $date=$_POST['date'];
 $title=$_POST['title'];
-insertdata("events","image,date,title","'$image','$date','$title'");
+$target_dir = "../assets/img/events/";
+$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$uploadOk = 1;
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+// Check if image file is a actual image or fake image
+
+    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+    if($check !== false) {
+        echo "File is an image - " . $check["mime"] . ".";
+        $uploadOk = 1;
+    } else {
+        echo "File is not an image.";
+        $uploadOk = 0;
+    }
+
+// Check if file already exists
+if (file_exists($target_file)) {
+    echo "Sorry, file already exists.";
+    $uploadOk = 0;
+}
+// Check file size
+if ($_FILES["fileToUpload"]["size"] > 5000000) {
+    echo "Sorry, your file is too large.";
+    $uploadOk = 0;
+}
+// Allow certain file formats
+if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+&& $imageFileType != "gif" ) {
+    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+    $uploadOk = 0;
+}
+// Check if $uploadOk is set to 0 by an error
+if ($uploadOk == 0) {
+    echo "Sorry, your file was not uploaded.";
+// if everything is ok, try to upload file
+} else {
+    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+	insertdata("events","date,title,image","'$date','$title','".$_FILES["fileToUpload"]["name"]."'");
+    } else {
+        echo "Sorry, there was an error uploading your file.";
+    }
+}
 }
 
 
@@ -212,6 +395,11 @@ $rid=$_GET['rid'];
 deletedata("records","id=".$rid,"index.php?pg=donation");
 }
 
+if(isset($_GET['delete_event']))
+{
+$id=$_GET['id'];
+deletedata("events","id=".$id,"index.php?pg=event");
+}
 
 if(isset($_GET['delete_image']))
 {
@@ -230,6 +418,13 @@ deletedata("testimony","id=".$id,"index.php?pg=testimony");
 unlink("../assets/img/testimony/".$_GET['image']);
 }
 
+if(isset($_GET['delete_image_events']))
+{
+$id=$_GET['id'];
+echo "../assets/img/events/".$_GET['image'];
+deletedata("events","id=".$id,"index.php?pg=event");
+unlink("../assets/img/events/".$_GET['image']);
+}
 
 if(isset($_GET['delete_image_sermon']))
 {

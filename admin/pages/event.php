@@ -52,7 +52,7 @@ while($row=mysqli_fetch_assoc($result))
 ?>
 <tr>
 
-<td><img src="../assets/img/gallery/<?php echo $row['image'];  ?>" height="100px" width="100px;"></td>
+<td><img src="../assets/img/events/<?php echo $row['image'];  ?>" height="100px" width="100px;"></td>
 
 <td><?php echo $row['date']; ?></td>
 <td><?php echo $row['title']; ?></td>
@@ -60,7 +60,7 @@ while($row=mysqli_fetch_assoc($result))
 <form>
 <input type="hidden" value="<?php echo $row['id']; ?>" name="id">
 <input type="hidden" value="<?php echo $row['image']; ?>" name="image">
-<button type="submit"  name = "delete_sermon"  class="btn"><i class="fa fa-trash"></i></button>
+<button type="submit"  name = "delete_image_events"  class="btn"><i class="fa fa-trash"></i></button>
 </form>
 </td>
 </tr>
