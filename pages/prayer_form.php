@@ -13,7 +13,7 @@ if(isset($_GET['status']))
 		{
 		?>
 		<div class="alert alert-success">
-			<p>Request Submitted With UID Number <?php echo $_GET['uid']; ?></p>
+			<p>Request Submitted With UID Number <?php echo $_GET['uid']; ?> .Your UID number has also been sent at your registered mail id.</p>
 		</div>
 		<?php
 		}
@@ -38,7 +38,7 @@ if(isset($_GET['status']))
 <div class="row mt-5 mb-5">
 <div class="col-md-12">
 <form method="post">
-<h2 class="text-center mb-3"><i class="fas fa-hands mr-2"></i>Request for Prayer</h2>
+<h2 class="text-center  mb-5 section-heading  sec-heading section-heading2 "><i class="fas fa-hands mr-2"></i>Request for Prayer</h2>
 <div class="form-group">
 <div class="input-group ">
   <div class="input-group-prepend">
@@ -84,6 +84,20 @@ if(isset($_GET['status']))
 <input type="text" name="fname" placeholder="Father's Name" required="required" class="form-control">
 </div>
 </div>
+
+
+
+<div class="form-group">
+
+<div class="input-group ">
+  <div class="input-group-prepend">
+	<span class="input-group-text">
+<i class="fas fa-envelope"></i>
+</div>
+<input type="email" name="email" placeholder="E-mail" required="required" class="form-control">
+</div>
+</div>
+
 
 
 <div class="form-group">

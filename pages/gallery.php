@@ -7,7 +7,7 @@ FROM GALLERY
 <div class="container">
 <div class="row ">
 <div class="col-md-12 text-center">
-<h3>GALLERY</h3>
+<h3 class=" section-heading  sec-heading section-heading2 mb-5">GALLERY</h3>
 </div>
 </div>
 <div class="row gallery_images">

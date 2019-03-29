@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 15, 2019 at 01:44 PM
+-- Generation Time: Mar 29, 2019 at 01:47 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -94,6 +94,7 @@ CREATE TABLE `prayer` (
   `dob` varchar(20) NOT NULL,
   `address` varchar(60) NOT NULL,
   `fname` varchar(20) NOT NULL,
+  `email` varchar(30) NOT NULL,
   `contact` varchar(20) NOT NULL,
   `request` text NOT NULL,
   `status` varchar(15) NOT NULL DEFAULT 'Pending',
@@ -104,9 +105,11 @@ CREATE TABLE `prayer` (
 -- Dumping data for table `prayer`
 --
 
-INSERT INTO `prayer` (`id`, `name`, `dob`, `address`, `fname`, `contact`, `request`, `status`, `uid`) VALUES
-(4, 'kamaljeet', '2019-02-07', 'dfdsf', 'sdf', '26589652456', 'fewf', 'Pending', 'POPWA3645'),
-(5, 'kamal', '2019-02-01', 'shyhghfghhh', 'jkjkkjk', '23569856362', 'hgjhghjghjg', 'Pending', 'POPWA9692');
+INSERT INTO `prayer` (`id`, `name`, `dob`, `address`, `fname`, `email`, `contact`, `request`, `status`, `uid`) VALUES
+(4, 'kamaljeet', '2019-02-07', 'dfdsf', 'sdf', '', '26589652456', 'fewf', 'Pending', 'POPWA3645'),
+(5, 'kamal', '2019-02-01', 'shyhghfghhh', 'jkjkkjk', '', '23569856362', 'hgjhghjghjg', 'Pending', 'POPWA9692'),
+(6, 'kamal', '2019-03-15', 'sdsss', 'dssdad', '', '985698569', 'xhjgbbvfjhgdhgdhdghjdgsfdhwtrrrrrrrrrrrertgfuy', 'Pending', 'POPWA9749'),
+(7, 'pastor raj kumar', '2019-03-22', 'sdsfd', 'ewrfe', '', '9988558919', 'asjhgsjutydsgwsk', 'Pending', 'POPWA6044');
 
 -- --------------------------------------------------------
 
@@ -308,7 +311,7 @@ ALTER TABLE `gallery`
 -- AUTO_INCREMENT for table `prayer`
 --
 ALTER TABLE `prayer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `records`
