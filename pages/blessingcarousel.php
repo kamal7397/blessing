@@ -1,11 +1,14 @@
 <div class="owl-carousel" id="banner">
-   <div class="row text-color1 bg-1 item">
+   <div class="row text-color1 bg-1 item" id="lang">
       <div class="col-md-6"></div>
       <div class="col-md-6 text-left b-left pl-5 pt1">
          <p class="p1">TRANSFORMING LIVE</p>
          <h1>RESTORING HOPE</h1>
-         <p>Transforming lives and societies through education, research and innovation.
-            Incididunt ut labore et dolore magna aliqua. 
+         <p><pre>"?????? ???? ?? ??? ????? ?? ???
+?????
+
+???? ??, ??? ???? ???? ?? ??? ??? ??
+?? ????? ???? ???..! </pre>
          </p>
          <a href="#"><button id="button" class="text-color1">READ MORE</button></a>
       </div>

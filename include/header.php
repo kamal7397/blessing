@@ -13,6 +13,9 @@
       <li class="nav-item">
         <a class="nav-link scrollLink" href="#sermons">Sermons</a>
       </li>
+	<li class="nav-item">
+        <a class="nav-link" href="#testimony">Testimony</a>
+      </li>
       <li class="nav-item">
         <a class="nav-link scrollLink"  href="#about">About</a>
       </li>    

@@ -16,7 +16,7 @@ display:none;
 body
 {
     margin: 0;
-padding-top:90px;
+padding-top:82px;
    height:100%;
 
 }
@@ -107,7 +107,7 @@ background-color:#111111;
 {
     background-image: url('../../img/background-img.jpg');
     width: 100%;
-    height: 506px;
+    height: 406px;
     background-size: cover;
     position:relative;
 }
@@ -121,6 +121,11 @@ margin-left:70px;
 #icons
 {
 margin-top:35px;
+}
+
+#lang
+{
+font-family: 'Mukta', sans-serif;
 }
 
 #nav li

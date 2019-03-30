@@ -27,6 +27,7 @@ include 'include/links.php';
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 <link href="assets/css/custom/style.css" rel="stylesheet">
 <link href="assets/css/custom/owl.carousel.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Mukta" rel="stylesheet">
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -49,7 +50,8 @@ include 'include/links.php';
 			include 'pages/latestsermons.php';
 			include 'pages/takemetochurch.php';
 			include 'pages/latestblogs.php';
-			
+			include 'pages/testimony.php';
+			include 'pages/review.php';			
 
 
 
@@ -106,7 +108,7 @@ include 'include/links.php';
 }
 	else
 	{
-		include 'pages/home.php';
+		header('location:index.php?pg=home');
 	}
 		include 'include/footer.php';
 
@@ -173,6 +175,20 @@ loop:true,
         }
     }
 });
+
+
+$('#review').owlCarousel({
+loop:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        }
+    }
+});
+
 
 $(document).ready(function(){
     $( "a.scrollLink" ).click(function( event ) {
