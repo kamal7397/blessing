@@ -1,4 +1,52 @@
 <div class="container">
+<div class="row mt-5 mb-2">
+<div class="col-md-3">
+</div>
+<div class="col-md-6">
+
+<?php
+if(isset($_GET['status']))
+{
+?>
+
+<div class="row mt-3">
+	<div class="col-md-12">
+
+		<?php
+		if($_GET['status']==0)
+		{
+		?>
+		<div class="alert alert-danger">
+			<p>Event is not Added</p>
+		</div>
+		<?php
+		}
+		else
+		?>
+		<div class="alert alert-success">
+			<p>Event is Added</p>
+		</div>
+		<?php		
+		}
+		?>
+
+
+
+
+</div>
+<div class="col-md-3">
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<div class="container">
 <div class="row">
 <div class="col-md-3">
 </div>
@@ -14,6 +62,9 @@
 </div>
 <div class="form-group">
 <input type="text" name="title" placeholder="Title" required="required" class="form-control">
+</div>
+<div class="form-group">
+<input type="text" name="description" placeholder="Description" required="required" class="form-control">
 </div>
 <input type="submit" name="addevent" value="Add Event" class="btn btn-block btn-primary"> 
 </form>
@@ -37,6 +88,7 @@
 <th>IMAGE</th>
 <th>DATE</th>
 <th>TITLE</th>
+<th>DESCRIPTION</th>
 <th>EDIT</th>
 </tr>
 </thead>
@@ -56,6 +108,7 @@ while($row=mysqli_fetch_assoc($result))
 
 <td><?php echo $row['date']; ?></td>
 <td><?php echo $row['title']; ?></td>
+<td><?php echo $row['description']; ?></td>
 <td class="text-center"><a href="index.php?pg=updateEvent&id=<?php echo $row['id'] ?>"><i class="fa fa-edit"></i>
 <form>
 <input type="hidden" value="<?php echo $row['id']; ?>" name="id">

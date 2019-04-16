@@ -147,6 +147,7 @@ if(isset($_POST['update_event']))
 {
 $date=$_POST['date'];
 $title=$_POST['title'];
+$description=$_POST['description'];
 if($_POST['oldimage'] !=""){
 	$oldimage=$_POST['oldimage'];
 	unlink("../assets/img/events/".$oldimage);
@@ -190,7 +191,7 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-	updatedata("events","date = '".$date."',title = '".$title."',image = '".$_FILES["fileToUpload"]["name"]."'", "id = ".$_GET['id']);
+	updatedata("events","date = '".$date."',title = '".$title."',description = '".$description."',image = '".$_FILES["fileToUpload"]["name"]."'", "id = ".$_GET['id']);
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
@@ -219,6 +220,7 @@ if(isset($_POST['addevent']))
 {
 $date=$_POST['date'];
 $title=$_POST['title'];
+$description=$_POST['description'];
 $target_dir = "../assets/img/events/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
@@ -257,7 +259,7 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-	insertdata("events","date,title,image","'$date','$title','".$_FILES["fileToUpload"]["name"]."'");
+	insertdata("events","date,title,description,image","'$date','$title','$description','".$_FILES["fileToUpload"]["name"]."'","index.php?pg=event&status=1","index.php?pg=event&status=0");
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
@@ -272,7 +274,7 @@ if(isset($_POST['addblog']))
 $date=$_POST['date'];
 $title=$_POST['title'];
 $description=$_POST['description'];
-insertdata("blogs","date,title,description","'$date','$title','$description'");
+insertdata("blogs","date,title,description","'$date','$title','$description'","index.php?pg=blog&status=1","index.php?pg=blog&status=0");
 }
 
 

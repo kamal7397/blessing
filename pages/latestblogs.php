@@ -8,45 +8,22 @@ latest blog
 <p class="p1">LATEST</p>
 <h2 class="p2 mb-0">BLOG</h2>
 </div>
+<?php
+$result=selectdata("*","blogs");
+while($row=mysqli_fetch_assoc($result))
+{
+?>
 <div class="owl-carousel col-md-9 px-0" id="second">
 <div class="padding2 block item">
-<span class="bgcolor2 text-color1">8, November</span>
-<h4>GODS GOAL FOR YOU</h4>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    </p>
-</div>
-<div class="padding2 bgcolor5 block item">
-<span class="bgcolor2 text-color1">8, November</span>
-<h4>THE BIBLE ON CAMPUS</h4>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    </p>
-</div>
-<div class="padding2 block item">
-<span class="bgcolor2 text-color1">8, November</span>
-<h4>A FAITHFUL WITNESS</h4>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    </p>
-</div>
 
+<span class="bgcolor2 text-color1"><?php echo $row['date']; ?></span>
+<h4><?php echo $row['title']; ?></h4>
+<p><?php echo $row['description']; ?>
+                                    </p>
 
-
-<div class="padding2 block bgcolor5 item">
-<span class="bgcolor2 text-color1">8, November</span>
-<h4>GODS GOAL FOR YOU</h4>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    </p>
-</div>
-<div class="padding2 block item">
-<span class="bgcolor2 text-color1">8, November</span>
-<h4>THE BIBLE ON CAMPUS</h4>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    </p>
-</div>
-<div class="padding2 block bgcolor5 item">
-<span class="bgcolor2 text-color1">8, November</span>
-<h4>A FAITHFUL WITNESS</h4>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    </p>
 </div>
 </div>
+<?php
+}
+?>
 </div>

@@ -57,6 +57,27 @@ if(isset($_GET['passStatus']))
 </div>
 </div>
 
+
+
+
+<div class="container">
+<div class="row">
+<div class="col-md-12 text-center text-primary">
+<p>If you want to donate for the church please signup and register your details with unique id and password. After that with that particular id Login here and donate. Also for the Future donation remember that id so that you will be able for the further donation.</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
 <div class="container">
 <div class="row mt-2 ">
 <div class="col-md-3">

@@ -10,18 +10,11 @@
       <li class="nav-item">
         <a class="nav-link" href="index.php?pg=home">Home</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="index.php?pg=sermons">Sermons</a>
-      </li>
+
       <li class="nav-item">
         <a class="nav-link" href="index.php?pg=donation">Donation</a>
       </li>    
-      <li class="nav-item">
-        <a class="nav-link" href="index.php?pg=prayers">Prayers</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="index.php?pg=gallery">Gallery</a>
-      </li>
+ 
     </ul>
   </div>  
 </nav>

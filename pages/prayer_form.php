@@ -38,7 +38,7 @@ if(isset($_GET['status']))
 <div class="row mt-5 mb-5">
 <div class="col-md-12">
 <form method="post">
-<h2 class="text-center  mb-5 section-heading  sec-heading section-heading2 "><i class="fas fa-hands mr-2"></i>Request for Prayer</h2>
+<h2 class="text-center  mb-5  "><i class="fas fa-hands mr-2"></i>Request for Prayer</h2>
 <div class="form-group">
 <div class="input-group ">
   <div class="input-group-prepend">
@@ -117,7 +117,7 @@ if(isset($_GET['status']))
 </div>
 
 
-<input type="submit" name="prayer" value="Request" class="btn btn-info btn-block">
+<input type="submit" name="prayer" value="Request" class="btn btn-primary btn-block">
 
 </form>
 </div>

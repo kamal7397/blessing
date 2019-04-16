@@ -22,7 +22,7 @@ include 'include/links.php';
 		  ?>
 	</title>
 
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 <link href="assets/css/custom/style.css" rel="stylesheet">
@@ -52,11 +52,6 @@ include 'include/links.php';
 			include 'pages/latestblogs.php';
 			include 'pages/testimony.php';
 			include 'pages/review.php';			
-
-
-
-
-
 		break;
 
 	 	case 'about':
@@ -147,6 +142,7 @@ $('#banner').owlCarousel({
 
 $('#first').owlCarousel({
 loop:true,
+   autoplay:true,
     responsive:{
         0:{
             items:1
@@ -156,6 +152,46 @@ loop:true,
         }
     }
 });
+
+
+
+$('#testimony').owlCarousel({
+    loop:true,
+
+ 
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+	},
+        1000:{
+            items:1,
+        }
+    }
+});
+
+
+
+$('#sermons').owlCarousel({
+loop:true,
+
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+	},
+        1000:{
+            items:1,
+        }
+    }
+});
+
+
+
 $('.play').on('click',function(){
     owl.trigger('play.owl.autoplay',[1000])
 });

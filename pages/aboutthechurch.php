@@ -22,9 +22,7 @@ about the church
 <div class="card-body text-left f-s text-color3">
 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto. </p>
 </div>
-<div class="card-footer">
-<a href="#"><button class="bgcolor2 text-color1 btn">READ MORE</button></a>
-</div>
+
 </div>
 </div>
 <div class="col-md-4">
@@ -38,9 +36,7 @@ about the church
 <div class="card-body text-left f-s text-color3">
 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto. </p>
 </div>
-<div class="card-footer">
-<a href="#"><button class="bgcolor2 text-color1 btn">READ MORE</button></a>
-</div>
+
 </div>
 </div>
 <div class="col-md-4">
@@ -54,9 +50,7 @@ about the church
 <div class="card-body text-left f-s text-color3">
 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto. </p>
 </div>
-<div class="card-footer">
-<a href="#"><button class="bgcolor2 text-color1 btn">READ MORE</button></a>
-</div>
+
 </div>
 </div>
 </div>

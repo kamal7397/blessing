@@ -1,4 +1,53 @@
 <div class="container">
+<div class="row mt-5 mb-2">
+<div class="col-md-3">
+</div>
+<div class="col-md-6">
+
+<?php
+if(isset($_GET['status']))
+{
+?>
+
+<div class="row mt-3">
+	<div class="col-md-12">
+
+		<?php
+		if($_GET['status']==0)
+		{
+		?>
+		<div class="alert alert-danger">
+			<p>Blog is not Added</p>
+		</div>
+		<?php
+		}
+		else
+		?>
+		<div class="alert alert-success">
+			<p>Blog is Added</p>
+		</div>
+		<?php		
+		}
+		?>
+
+
+
+
+</div>
+<div class="col-md-3">
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="container">
 <div class="row">
 <div class="col-md-3">
 </div>

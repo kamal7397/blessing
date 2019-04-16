@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 29, 2019 at 01:47 PM
--- Server version: 10.1.36-MariaDB
--- PHP Version: 7.2.11
+-- Generation Time: Apr 16, 2019 at 11:14 AM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.1.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -40,7 +40,13 @@ CREATE TABLE `blogs` (
 --
 
 INSERT INTO `blogs` (`id`, `date`, `title`, `description`) VALUES
-(1, '2019-03-10', 'rtreer', 'dsd');
+(1, '2019-03-10', 'rtreer', 'dsd'),
+(2, '2019-04-09', 'fdgfgghjgh', 'gcjhgynbcsauiyhdaksajkasjoiauajojlksjksljkfjs'),
+(3, '2019-04-09', 'fdgfgghjgh', 'gcjhgynbcsauiyhdaksajkasjoiauajojlksjksljkfjs'),
+(4, '2019-04-09', 'fdgfgghjgh', 'gcjhgynbcsauiyhdaksajkasjoiauajojlksjksljkfjs'),
+(5, '2019-04-09', 'fdgfgghjgh', 'gcjhgynbcsauiyhdaksajkasjoiauajojlksjksljkfjs'),
+(6, '2019-04-09', 'fdgfgghjgh', 'gcjhgynbcsauiyhdaksajkasjoiauajojlksjksljkfjs'),
+(7, '2019-04-09', 'fdgfgghjgh', 'gcjhgynbcsauiyhdaksajkasjoiauajojlksjksljkfjs');
 
 -- --------------------------------------------------------
 
@@ -52,16 +58,16 @@ CREATE TABLE `events` (
   `id` int(11) NOT NULL,
   `image` varchar(50) NOT NULL,
   `date` varchar(20) NOT NULL,
-  `title` varchar(20) NOT NULL
+  `title` varchar(20) NOT NULL,
+  `description` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `events`
 --
 
-INSERT INTO `events` (`id`, `image`, `date`, `title`) VALUES
-(1, '', '2019-03-03', 'rtreer'),
-(2, '', '2019-03-10', 'rtreer');
+INSERT INTO `events` (`id`, `image`, `date`, `title`, `description`) VALUES
+(1, 'Penguins.jpg', '2019-04-17', 'fdgfg', 'gcjhgynbcsauiyhdaksajkasjoiauajojlksjksljkfjs');
 
 -- --------------------------------------------------------
 
@@ -293,13 +299,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `blogs`
 --
 ALTER TABLE `blogs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `gallery`

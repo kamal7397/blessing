@@ -56,17 +56,12 @@ include 'include/links.php';
 		include 'pages/donation.php';
 		break;
 
-		case 'prayers':
-		include 'pages/prayers.php';
-		break;
 
 		case 'updatePrayer':
 		include 'pages/updatePrayer.php';
 		break;
 
-		case 'gallery':
-		include 'pages/gallery.php';
-		break;
+		
 
 		default;
 		include 'pages/profile.php';
