@@ -15,11 +15,12 @@ latest sermons
 <div class="container owl-carousel" id="sermons">
 
 	<?php
-		$result=selectdata("*","sermons");
+		$query="SELECT * FROM sermons ORDER BY id DESC";
+		$result = mysqli_query($con,$query);
 		$rows=mysqli_num_rows($result);
 		$total_rows=$rows/3;
 		
-		for($i=0; $i<$total_rows; i++)	
+		for($i=0; $i<$total_rows; $i++)	
 		{
 		$x=0;
 	?>
@@ -32,15 +33,15 @@ latest sermons
 	?>
 <div class="row mb-2 pb-2 b-bottom">
 <div class="col-md-2">
-<img src="assets/img/s3.jpg" alt="pic3" width="100%" >
+<img src="assets/img/sermons/<?php echo $row['image']; ?>" alt="pic3" width="100%" >
 </div>
 <div class="col-md-7">
-<p class="f-sizep mt-2">Find And You Shall Seek</p>
-<p>By <a href="#"><span class="text-color2"> Ron Ward</span></a> , February 22,2017</p>
+<p class="f-sizep mt-2"><?php echo $row['name']; ?></p>
+<p>By <a href="#"><span class="text-color2"><?php echo $row['author']; ?></span></a> , <?php echo $row['date']; ?></p>
 </div>
 <div class="col-md-3">
 
-<i class="fas fa-video bgcolor1 text-color1 fa-1x mr-2 px-4 pt-4 pb-4 font-sizei"></i>
+<a href="<?php echo $row['link']; ?>" target="_blank"><i class="fas fa-video bgcolor1 text-color1 fa-1x mr-2 px-4 pt-4 pb-4 font-sizei"></i></a>
 <i class="fas fa-volume-up bgcolor1 text-color1 fa-1x mr-2 px-4 pt-4 pb-4 font-sizei"></i>
 <i class="fas fa-file-pdf bgcolor1 text-color1 fa-1x mr-2 px-4 pt-4 pb-4 font-sizei" ></i>
 </div>

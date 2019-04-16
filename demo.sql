@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 16, 2019 at 11:14 AM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.1.26
+-- Generation Time: Apr 16, 2019 at 02:30 PM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.2.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -152,16 +152,17 @@ CREATE TABLE `sermons` (
   `name` varchar(20) NOT NULL,
   `author` varchar(20) NOT NULL,
   `date` varchar(20) NOT NULL,
-  `image` varchar(30) NOT NULL
+  `image` varchar(30) NOT NULL,
+  `link` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `sermons`
 --
 
-INSERT INTO `sermons` (`id`, `name`, `author`, `date`, `image`) VALUES
-(1, 'fd', 'fsd', '2019-03-02', ''),
-(2, 'fd', 'fsd', '2019-03-10', '');
+INSERT INTO `sermons` (`id`, `name`, `author`, `date`, `image`, `link`) VALUES
+(11, 'kamal', 'kamal', '2019-04-20', 'Jellyfish.jpg', 'https://www.youtube.com/watch?v=t2OvfW7Qg60'),
+(12, 'kamalbnbndc', 'kamaljeet', '2019-04-13', 'Koala.jpg', 'https://www.youtube.com/watch?v=t2OvfW7Qg60');
 
 -- --------------------------------------------------------
 
@@ -174,15 +175,16 @@ CREATE TABLE `testimony` (
   `name` varchar(20) NOT NULL,
   `author` varchar(20) NOT NULL,
   `date` varchar(20) NOT NULL,
-  `image` varchar(30) NOT NULL
+  `image` varchar(30) NOT NULL,
+  `link` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `testimony`
 --
 
-INSERT INTO `testimony` (`id`, `name`, `author`, `date`, `image`) VALUES
-(3, 'fd', 'fsd', '2019-03-16', 'Desert.jpg');
+INSERT INTO `testimony` (`id`, `name`, `author`, `date`, `image`, `link`) VALUES
+(8, 'kamal', 'kamal', '2019-04-06', 'Chrysanthemum.jpg', 'https://www.youtube.com/watch?v=t2OvfW7Qg60');
 
 -- --------------------------------------------------------
 
@@ -329,13 +331,13 @@ ALTER TABLE `records`
 -- AUTO_INCREMENT for table `sermons`
 --
 ALTER TABLE `sermons`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `testimony`
 --
 ALTER TABLE `testimony`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`

@@ -285,6 +285,7 @@ if(isset($_POST['addsermon']))
 $name=$_POST['name'];
 $author=$_POST['author'];
 $date=$_POST['date'];
+$link=$_POST['link'];
 
 $target_dir = "../assets/img/sermons/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -324,7 +325,7 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-	insertdata("sermons","name,author,date,image","'$name','$author','$date','".$_FILES["fileToUpload"]["name"]."'");
+	insertdata("sermons","name,author,date,link,image","'$name','$author','$date','$link','".$_FILES["fileToUpload"]["name"]."'", "index.php?pg=sermons&status=1", "index.php?pg=sermons&status=0");
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
@@ -341,6 +342,7 @@ if(isset($_POST['addtestimony']))
 $name=$_POST['name'];
 $author=$_POST['author'];
 $date=$_POST['date'];
+$link=$_POST['link'];
 
 $target_dir = "../assets/img/testimony/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -380,7 +382,7 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-	insertdata("testimony","name,author,date,image","'$name','$author','$date','".$_FILES["fileToUpload"]["name"]."'");
+	insertdata("testimony","name,author,date,link,image","'$name','$author','$date','$link','".$_FILES["fileToUpload"]["name"]."'", "index.php?pg=testimony&status=1", "index.php?pg=testimony&status=0");
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
@@ -431,6 +433,7 @@ unlink("../assets/img/events/".$_GET['image']);
 if(isset($_GET['delete_image_sermon']))
 {
 $id=$_GET['id'];
+
 echo "../assets/img/sermons/".$_GET['image'];
 deletedata("sermons","id=".$id,"index.php?pg=sermons");
 unlink("../assets/img/sermons/".$_GET['image']);

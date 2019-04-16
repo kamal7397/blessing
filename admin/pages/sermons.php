@@ -60,7 +60,7 @@ while($row=mysqli_fetch_assoc($result))
 <td><?php echo $row['author']; ?></td>
 <td><?php echo $row['link']; ?></td>
 <td><?php echo $row['date']; ?></td>
-<td class="text-center"><a href="index.php?pg=updateSermons&id=<?php echo $row['id'] ?>"><i class="fa fa-edit"></i>
+<td class="text-center"><a href="index.php?pg=updateSermons&id=<?php echo $row['id'] ?>&image=<?php echo $row['image'] ?>"><i class="fa fa-edit"></i>
 <form>
 <input type="hidden" value="<?php echo $row['id']; ?>" name="id">
 <input type="hidden" value="<?php echo $row['image']; ?>" name="image">

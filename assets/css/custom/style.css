@@ -841,9 +841,19 @@ position:fixed;
   right: 0;
   left: 0;
 }
-
 .position-bottom
 {
-display: table-row;
-    height: 0;
+	position:relative;
+}
+.position-bottom::after
+{
+	content:'';
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+}
+.sec{
+	margin-top:68px;
+	margin-bottom:68px;
 }

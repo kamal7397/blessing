@@ -12,6 +12,9 @@
 <input type="text" name="author" placeholder="Author" required="required" class="form-control">
 </div>
 <div class="form-group">
+<input type="text" name="link" placeholder="Link" required="required" class="form-control">
+</div>
+<div class="form-group">
 <input placeholder="Date" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" name="date">
 </div>
 <div class="form-group">
@@ -55,7 +58,7 @@ while($row=mysqli_fetch_assoc($result))
 <td><img src="../assets/img/testimony/<?php echo $row['image'];  ?>" height="100px" width="100px;"></td>
 <td><?php echo $row['author']; ?></td>
 <td><?php echo $row['date']; ?></td>
-<td class="text-center"><a href="index.php?pg=updateTestimony&id=<?php echo $row['id'] ?>"><i class="fa fa-edit"></i>
+<td class="text-center"><a href="index.php?pg=updateTestimony&id=<?php echo $row['id'] ?>&image=<?php echo $row['image'] ?>"><i class="fa fa-edit"></i>
 <form>
 <input type="hidden" value="<?php echo $row['id']; ?>" name="id">
 <input type="hidden" value="<?php echo $row['image']; ?>" name="image">

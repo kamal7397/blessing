@@ -3,7 +3,7 @@
 last div
 ##################################
 -->
-<div class="row bgcolor6 text-center" >
+<div class="row bgcolor6 text-center position-bottom" >
 <div class="col-md-12 content mt-4 mb-4">
 <p><i class="far fa-copyright"></i> Copyiright 2017 - Blessing by SatriaThemes</p>
 </div>
