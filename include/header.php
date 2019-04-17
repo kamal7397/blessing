@@ -1,7 +1,7 @@
 <div class="row bg-dark fixed-top" id="firstRow">
 	<div class="col-md-9 col-xs-12">   
 	<nav class="navbar navbar-expand-md navbar-dark " >
-	<a class="navbar-brand" href="#"> <img src="assets/img/logo.png" class="ml-4 mt-4 img-fluid position1"> </a>
+	<a class="navbar-brand" href="#"> <img src="assets/img/red-banner.png" class="ml-4 mt-4 img-fluid position1"> </a>
 	 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     		<span class="navbar-toggler-icon"></span>
   	</button>
@@ -35,7 +35,7 @@
   </div>  
 </nav>
 </div>
-	<div class="col-md-3 float-right text-center d-none d-md-block mt-5">
+	<div class="col-md-3 float-right text-center d-none d-md-block mt-5 pt-2">
 <a href="#"><i class="fab fa-facebook-f text-color1 mr-3"></i></a>
 <a href="#"><i class="fab fa-twitter text-color1 mr-3"></i></a> 
 <a href="#"><i class="fas fa-rss text-color1 mr-3"></i></a>
