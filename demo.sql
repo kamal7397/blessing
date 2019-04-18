@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 16, 2019 at 02:30 PM
+-- Generation Time: Apr 18, 2019 at 02:38 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -138,8 +138,7 @@ CREATE TABLE `records` (
 
 INSERT INTO `records` (`id`, `amount`, `date`, `purpose`, `type`, `userid`) VALUES
 (4, '1000', '2019-02-19', 'funds', 'donation', 3),
-(5, '1000', '2019-02-18', 'const', 'donation', 3),
-(6, '1000', '2019-02-19', 'const', 'expense', 3);
+(5, '1000', '2019-02-18', 'const', 'donation', 3);
 
 -- --------------------------------------------------------
 
@@ -163,6 +162,22 @@ CREATE TABLE `sermons` (
 INSERT INTO `sermons` (`id`, `name`, `author`, `date`, `image`, `link`) VALUES
 (11, 'kamal', 'kamal', '2019-04-20', 'Jellyfish.jpg', 'https://www.youtube.com/watch?v=t2OvfW7Qg60'),
 (12, 'kamalbnbndc', 'kamaljeet', '2019-04-13', 'Koala.jpg', 'https://www.youtube.com/watch?v=t2OvfW7Qg60');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `temp_records`
+--
+
+CREATE TABLE `temp_records` (
+  `id` int(11) NOT NULL,
+  `amount` varchar(10) NOT NULL,
+  `date` varchar(50) NOT NULL,
+  `purpose` varchar(60) NOT NULL,
+  `type` varchar(30) NOT NULL,
+  `userid` int(11) NOT NULL,
+  `status` varchar(20) NOT NULL DEFAULT 'requested'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -282,6 +297,13 @@ ALTER TABLE `sermons`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `temp_records`
+--
+ALTER TABLE `temp_records`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `userid` (`userid`);
+
+--
 -- Indexes for table `testimony`
 --
 ALTER TABLE `testimony`
@@ -334,6 +356,12 @@ ALTER TABLE `sermons`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
+-- AUTO_INCREMENT for table `temp_records`
+--
+ALTER TABLE `temp_records`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `testimony`
 --
 ALTER TABLE `testimony`
@@ -354,6 +382,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `records`
   ADD CONSTRAINT `records_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `users` (`id`);
+
+--
+-- Constraints for table `temp_records`
+--
+ALTER TABLE `temp_records`
+  ADD CONSTRAINT `records_ibfk_2` FOREIGN KEY (`userid`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

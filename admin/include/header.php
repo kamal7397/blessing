@@ -17,7 +17,7 @@
         <a class="nav-link" href="index.php?pg=testimony">Testimony</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="index.php?pg=about">About</a>
+        <a class="nav-link" href="index.php?pg=request">Request</a>
       </li>    
       <li class="nav-item">
         <a class="nav-link" href="index.php?pg=prayers">Prayers</a>

@@ -45,15 +45,7 @@ include 'include/links.php';
 	{
 	switch($_GET['pg']){
 		case 'home':
-			include 'pages/blessingcarousel.php';
-			include 'pages/upcomingevents.php';
-			include 'pages/transforminglive.php';
-			include 'pages/aboutthechurch.php';
-			include 'pages/latestsermons.php';
-			include 'pages/takemetochurch.php';
-			include 'pages/latestblogs.php';
-			include 'pages/testimony.php';
-			include 'pages/review.php';
+			echo "Welcome";
 		break;
 		
 		case 'profile':
@@ -63,6 +55,11 @@ include 'include/links.php';
 		case 'sermons':
 		include 'pages/sermons.php';
 		break;
+
+		case 'request':
+		include 'pages/request.php';
+		break;
+
 
 		case 'testimony':
 		include 'pages/testimony.php';

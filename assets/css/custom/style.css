@@ -784,6 +784,11 @@ top:32%;
 color:#fff;
 }
 
+#nav-top li
+{
+	margin-left:13px;
+}
+
 #bottom-nav
 {
 list-style-type:none;
@@ -799,7 +804,8 @@ color:#fff;
 
 .nav_marginleft_list
 {
-margin-left:60px;
+margin-left:40px;
+margin-right:40px;
 }
 
 .navbar-dark .nav-item .nav-link
