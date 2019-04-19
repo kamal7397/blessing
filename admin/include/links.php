@@ -408,15 +408,18 @@ deletedata("events","id=".$id,"index.php?pg=event");
 if(isset($_GET['delete_image']))
 {
 $id=$_GET['id'];
+$image=$_GET['image'];
 echo "../assets/img/gallery/".$_GET['image'];
 deletedata("gallery","id=".$id,"index.php?pg=gallery");
 unlink("../assets/img/gallery/".$_GET['image']);
 }
 
 
+
 if(isset($_GET['delete_image_testimony']))
 {
 $id=$_GET['id'];
+$image=$_GET['image'];
 echo "../assets/img/testimony/".$_GET['image'];
 deletedata("testimony","id=".$id,"index.php?pg=testimony");
 unlink("../assets/img/testimony/".$_GET['image']);
@@ -425,6 +428,7 @@ unlink("../assets/img/testimony/".$_GET['image']);
 if(isset($_GET['delete_image_events']))
 {
 $id=$_GET['id'];
+$image=$_GET['image'];
 echo "../assets/img/events/".$_GET['image'];
 deletedata("events","id=".$id,"index.php?pg=event");
 unlink("../assets/img/events/".$_GET['image']);
@@ -433,7 +437,7 @@ unlink("../assets/img/events/".$_GET['image']);
 if(isset($_GET['delete_image_sermon']))
 {
 $id=$_GET['id'];
-
+$image=$_GET['image'];
 echo "../assets/img/sermons/".$_GET['image'];
 deletedata("sermons","id=".$id,"index.php?pg=sermons");
 unlink("../assets/img/sermons/".$_GET['image']);
@@ -492,7 +496,7 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-	insertdata("gallery","name,image","'".$name."','".$_FILES["fileToUpload"]["name"]."'");
+	insertdata("gallery","name,image","'".$name."','".$_FILES["fileToUpload"]["name"]."'","index.php?pg=gallery&status=1", "index.php?pg=gallery&status=0");
     } else {
         echo "Sorry, there was an error uploading your file.";
     }

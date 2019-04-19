@@ -10,7 +10,7 @@
 ???? ??, ??? ???? ???? ?? ??? ??? ??
 ?? ????? ???? ???..! </pre>
          </p>
-         <a href="#"><button id="button" class="text-color1">READ MORE</button></a>
+        
       </div>
    </div>
    <div class="row bg-2 text-color1 item">
@@ -20,7 +20,7 @@
          <p>Put your faith into action today and let your actions be fueled by your faith.
             Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
          </p>
-         <a href="#"><button id="button" class="text-color1">READ MORE</button></a>
+       
       </div>
       <div class="col-md-6"></div>
    </div>
@@ -32,7 +32,7 @@
          <p>The first step in overcoming any kind of situation that holds me in bondage
             in my thoughts,mind, body and spirit is to surrender it to God 
          </p>
-         <a href="#"><button id="button" class="text-color1">READ MORE</button></a>
+      
       </div>
    </div>
 </div>

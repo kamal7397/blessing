@@ -29,7 +29,7 @@
 
 </div>
 <div class="col-md-6">
-<h3 class="text-center mt-3 mb-3">Donation</h3>
+<h3 class="text-center mt-5 mb-3">Donation</h3>
 <form method="post" enctype="multipart/form-data" >
 <div class="form-group">
 <input type="text" name="amount" placeholder="Amount" required="required" class="form-control">

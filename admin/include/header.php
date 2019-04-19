@@ -1,7 +1,7 @@
 <div class="row bg-dark fixed-top">
 	<div class="col-md-9 col-xs-12">   
 	<nav class="navbar navbar-expand-md navbar-dark ">
-	<a class="navbar-brand" href="#"> <img src="../assets/img/logo.png" class="ml-4 mt-4 img-fluid position1"> </a>
+	<a class="navbar-brand" href="#"> <img src="../assets/img/red-banner.png" class="ml-4 mt-4 img-fluid position1"> </a>
 	 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     		<span class="navbar-toggler-icon"></span>
   	</button>
