@@ -7,7 +7,7 @@ last div
 <div class="col-md-6 content mt-5 mb-4">
 <p><i class="far fa-copyright"></i> Copyiright 2019 - Prince Of Peace Welfare Association</p>
 </div>
-	<div class="col-md-2 float-right text-center d-none d-md-block mt-5 mb-4">
+	<div class="col-md-6 float-right text-center d-none d-md-block mt-5 mb-4">
 <a href="#"><i class="fab fa-facebook-f text-color1 mr-3"></i></a>
 <a href="#"><i class="fab fa-twitter text-color1 mr-3"></i></a> 
 <a href="#"><i class="fab fa-youtube text-color1 mr-3"></i></a>

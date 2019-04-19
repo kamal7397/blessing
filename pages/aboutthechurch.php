@@ -14,7 +14,7 @@ about the church
 <div class="col-md-4">
 <div class="card">
 <div class="card-image">
-<img src="assets/img/pic-1.jpg" alt="pic1" width="100%" >
+<img src="assets/img/card1.jpg" alt="pic1" width="100%" height="270px" >
 </div>
 <div class="card-title mb-0 text-center">
 <h3>Our Community</h3>
@@ -28,7 +28,7 @@ about the church
 <div class="col-md-4">
 <div class="card">
 <div class="card-image">
-<img src="assets/img/pic-2.jpg" alt="pic2" width="100%" >
+<img src="assets/img/card2.jpg" alt="pic2" width="100%" height="270px">
 </div>
 <div class="card-title mb-0 text-center">
 <h3>Church Mission</h3>
@@ -42,7 +42,7 @@ about the church
 <div class="col-md-4">
 <div class="card">
 <div class="card-image">
-<img src="assets/img/pic-3.jpg" alt="pic3" width="100%" >
+<img src="assets/img/card3.jpg" alt="pic3" width="100%" height="270px">
 </div>
 <div class="card-title mb-0 text-center">
 <h3>Participate With Us</h3>
