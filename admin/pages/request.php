@@ -39,8 +39,13 @@ while($row=mysqli_fetch_assoc($result))
 <td><?php  echo $row['purpose']; ?></td>
 <td><?php  echo $row['userid']; ?></td>
 <td><?php  echo $row['status']; ?></td>
+<td class="text-center">
+<form>
+<input type="hidden" value="<?php echo $row['id'];  ?>" name="id">
+<button type="submit" name="temprec" class="btn"><i class="fas fa-check"></i></button>
+</form>
 
-<td class="text-center"><a href="index.php?pg=updateRecord&rid=<?php echo $row['rid'] ?>"><i class="fa fa-edit"></i>
+
 
 <form>
 <input type="hidden" value="<?php echo $row['rid'];  ?>" name="rid">

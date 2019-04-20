@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 18, 2019 at 02:38 PM
+-- Generation Time: Apr 20, 2019 at 08:48 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -86,7 +86,9 @@ CREATE TABLE `gallery` (
 --
 
 INSERT INTO `gallery` (`id`, `name`, `image`) VALUES
-(3, 'fd', 'Tulips.jpg');
+(3, 'fd', 'Tulips.jpg'),
+(4, 'kamal', 'takechurch.jpg'),
+(5, 'kamal', 'blessing22.jpeg');
 
 -- --------------------------------------------------------
 
@@ -138,7 +140,8 @@ CREATE TABLE `records` (
 
 INSERT INTO `records` (`id`, `amount`, `date`, `purpose`, `type`, `userid`) VALUES
 (4, '1000', '2019-02-19', 'funds', 'donation', 3),
-(5, '1000', '2019-02-18', 'const', 'donation', 3);
+(5, '1000', '2019-02-18', 'const', 'donation', 3),
+(7, '3000', '2019-04-20', 'construction', 'donation', 1);
 
 -- --------------------------------------------------------
 
@@ -174,10 +177,16 @@ CREATE TABLE `temp_records` (
   `amount` varchar(10) NOT NULL,
   `date` varchar(50) NOT NULL,
   `purpose` varchar(60) NOT NULL,
-  `type` varchar(30) NOT NULL,
   `userid` int(11) NOT NULL,
   `status` varchar(20) NOT NULL DEFAULT 'requested'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `temp_records`
+--
+
+INSERT INTO `temp_records` (`id`, `amount`, `date`, `purpose`, `userid`, `status`) VALUES
+(1, '3000', '2019-04-20', 'construction', 1, 'accepted');
 
 -- --------------------------------------------------------
 
@@ -335,7 +344,7 @@ ALTER TABLE `events`
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `prayer`
@@ -347,7 +356,7 @@ ALTER TABLE `prayer`
 -- AUTO_INCREMENT for table `records`
 --
 ALTER TABLE `records`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `sermons`
@@ -359,7 +368,7 @@ ALTER TABLE `sermons`
 -- AUTO_INCREMENT for table `temp_records`
 --
 ALTER TABLE `temp_records`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `testimony`

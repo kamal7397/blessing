@@ -68,7 +68,7 @@ background-color:#111111;
 {
     background-image: url('../../img/blessing1.jpg');
     width: 100%;
-    height: 606px;
+    height: 706px;
     background-size: cover;
 
 
@@ -78,8 +78,9 @@ background-color:#111111;
 {
     background-image: url('../../img/blessing2.jpg');
     width: 100%;
-    height: 606px;
+    height: 706px;
     background-size: cover;
+	background-position:center;
 
 
 }
@@ -88,7 +89,7 @@ background-color:#111111;
 {
     background-image: url('../../img/blessing3.jpg');
     width: 100%;
-    height: 606px;
+    height: 706px;
     background-size: cover;
 
 }

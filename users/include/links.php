@@ -10,7 +10,7 @@ if(isset($_POST['donation']))
 $amount=$_POST['amount'];
 $date=$_POST['date'];
 $purpose=$_POST['purpose'];
-insertdata("records","amount,date,purpose, userid, type","'".$amount."','".$date."','".$purpose."',".$_SESSION['userid'].",'donation'");
+insertdata("temp_records","amount,date,purpose, userid","'".$amount."','".$date."','".$purpose."',".$_SESSION['userid']);
 
 }
 ?>

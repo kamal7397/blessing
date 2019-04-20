@@ -41,7 +41,7 @@
 <tbody>
 
 <?php
-$result=selectdatacon("*","records","userid =".$_SESSION['userid']);
+$result=selectdatacon("*","temp_records","userid =".$_SESSION['userid']);
 while($row=mysqli_fetch_assoc($result))
 	{
 

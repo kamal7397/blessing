@@ -26,7 +26,14 @@ $rid=$_GET['rid'];
 updatedata("records", "amount = '".$amount."',purpose = '".$purpose."',date = '".$date."',type = '".$rec_type."'","id = ".$_GET['rid']);
 }
 
-
+if(isset($_GET['temprec']))
+{
+updatedata("temp_records","status='accepted'","id=".$_GET['id']); 
+$result=selectdatacon("*","temp_records","id=".$_GET['id']);
+$row=mysqli_fetch_assoc($result);
+insertdata("records","amount,date,purpose,userid,type","'".$row['amount']."','".$row['date']."','".$row['purpose']."','".$row['userid']."','donation'","index.php?pg=request","index.php?pg=request");
+header('location:index.php?pg=request');
+}
 
 if(isset($_POST['update_sermon']))
 {
