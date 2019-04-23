@@ -143,6 +143,7 @@ $('#banner').owlCarousel({
 $('#first').owlCarousel({
 loop:true,
    autoplay:true,
+ autoplayTimeout:2000,
     responsive:{
         0:{
             items:1
@@ -156,9 +157,11 @@ loop:true,
 
 
 $('#testimony').owlCarousel({
-    loop:true,
+	loop:true,	
+	autoplay:true,
+	autoplayTimeout:1000,
+	autoplayHoverPause:true,
 
- 
     responsive:{
         0:{
             items:1
@@ -176,7 +179,8 @@ $('#testimony').owlCarousel({
 
 $('#sermons').owlCarousel({
 loop:true,
-
+autoplay:true,
+ autoplayTimeout:2000,
     responsive:{
         0:{
             items:1
@@ -234,6 +238,42 @@ $(document).ready(function(){
 });
 
 
+$(document).ready(function(){
+
+	var interval = setInterval(function(){
+	var currentTime = new Date();
+
+	var endTime = new Date(new Date().getFullYear(), 11, 31,23,59,59);
+
+	var diff = endTime - currentTime;
+
+	var miliseconds = 1;
+	var seconds = miliseconds * 1000;
+	var minutes = seconds * 60;
+	var hours = minutes * 60;
+	var days = hours * 24;
+	var years = days * 365;
+
+	var numDays = Math.floor((diff % years) / days);
+	var numHours = Math.floor((diff % days) / hours);
+	var numMinutes = Math.floor((diff % hours) / minutes);
+	var numSeconds = Math.round((diff % minutes) / seconds);
+
+	document.getElementById('days').innerHTML = numDays;
+	document.getElementById('hours').innerHTML = numHours;
+	document.getElementById('mins').innerHTML = numMinutes;
+	document.getElementById('sec').innerHTML = numSeconds;
+	document.getElementById('date').innerHTML = currentTime;
+
+	//console.log(numDays+'Days '+numHours+'Hours '+numMinutes+'Minutes '+numSeconds+'Seconds');
+	}, 1000);
+
+
+});
+
+
 </script>
+
+
 
 </html>

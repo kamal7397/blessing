@@ -52,6 +52,10 @@ include 'include/links.php';
 		include 'pages/profile.php';
 		break;
 
+		case 'welcome':
+		include 'pages/welcome.php';
+		break;
+
 		case 'donation':
 		include 'pages/donation.php';
 		break;

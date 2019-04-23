@@ -8,7 +8,7 @@
 	<div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav nav_marginleft_list mt-2 ml-auto" id="nav-top">
       <li class="nav-item">
-        <a class="nav-link" href="index.php?pg=home">Home</a>
+        <a class="nav-link" href="index.php?pg=welcome">Home</a>
       </li>
 
       <li class="nav-item">

@@ -8,12 +8,12 @@ latest blog
 <p class="p1">LATEST</p>
 <h2 class="p2 mb-0">BLOG</h2>
 </div>
+<div class="owl-carousel col-md-9 px-0" id="second">
 <?php
 $result=selectdata("*","blogs");
 while($row=mysqli_fetch_assoc($result))
 {
 ?>
-<div class="owl-carousel col-md-9 px-0" id="second">
 <div class="padding2 block item">
 
 <span class="bgcolor2 text-color1"><?php echo $row['date']; ?></span>
@@ -22,8 +22,9 @@ while($row=mysqli_fetch_assoc($result))
                                     </p>
 
 </div>
-</div>
+
 <?php
 }
 ?>
+</div>
 </div>
