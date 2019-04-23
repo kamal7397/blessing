@@ -5,10 +5,10 @@ last div
 -->
 <div class="row bgcolor6 text-center position-bottom" >
 <div class="col-md-6 content mt-5 mb-4">
-<p><i class="far fa-copyright"></i> Copyiright 2019 - Prince Of Peace Welfare Association</p>
+<p><i class="far fa-copyright"></i> Copyright 2019 - Prince Of Peace Welfare Association</p>
 </div>
 	<div class="col-md-6 float-right text-center d-none d-md-block mt-5 mb-4">
-<a href="" target="_blank"><i class="fab fa-facebook-f text-color1 mr-3"></i></a>
+<a href="#" target="_blank"><i class="fab fa-facebook-f text-color1 mr-3"></i></a>
 <a href="#" target="_blank"><i class="fab fa-twitter text-color1 mr-3"></i></a> 
 <a href="https://www.youtube.com/channel/UCzsoi5xgYQj4x4OjuB9r8JA" target="_blank"><i class="fab fa-youtube text-color1 mr-3"></i></a>
 <a href="#" target="_blank"><i class="fab fa-google-plus-g text-color1 mr-3"></i></a>

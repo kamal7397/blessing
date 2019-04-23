@@ -103,10 +103,10 @@ while($row=mysqli_fetch_assoc($result))
 
 ?>
 <tr>
-
+<td><?php echo $row['date']; ?></td>
 <td><img src="../assets/img/events/<?php echo $row['image'];  ?>" height="100px" width="100px;"></td>
 
-<td><?php echo $row['date']; ?></td>
+
 <td><?php echo $row['title']; ?></td>
 <td><?php echo $row['description']; ?></td>
 <td class="text-center"><a href="index.php?pg=updateEvent&id=<?php echo $row['id'] ?>"><i class="fa fa-edit"></i>

@@ -1,12 +1,12 @@
-<div class="row bg-dark">
-	<div class="col-md-9 col-xs-12">   
+<div class="row bg-dark fixed-top">
+	<div class="col-md-10 col-xs-12">   
 	<nav class="navbar navbar-expand-md navbar-dark ">
-	<a class="navbar-brand" href="#"> <img src="../assets/img/red-banner.png" class="ml-4 mt-4 img-fluid position1"> </a>
+	<a class="navbar-brand" href="#"> <img src="../assets/img/red-banner.png" style="width:240px;" class="pt-2"> </a>
 	 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     		<span class="navbar-toggler-icon"></span>
   	</button>
 	<div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav nav_marginleft_list mt-4">
+    <ul class="navbar-nav nav_marginleft_list mt-2 ml-auto" id="nav-top">
       <li class="nav-item">
         <a class="nav-link" href="index.php?pg=home">Home</a>
       </li>

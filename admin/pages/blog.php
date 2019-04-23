@@ -61,8 +61,9 @@ if(isset($_GET['status']))
 <div class="form-group">
 <input type="text" name="title" placeholder="Title" required="required" class="form-control">
 </div>
+
 <div class="form-group">
-<input type="text" name="description" placeholder="Description" required="required" class="form-control">
+<textarea class="form-control" name="description" rows="10" placeholder="Description"></textarea>
 </div>
 <input type="submit" name="addblog" value="Add Blog" class="btn btn-block btn-primary"> 
 </form>
@@ -76,8 +77,8 @@ if(isset($_GET['status']))
 
 
 <div class="container">
-<div class="row mt-3">
-<div class="col-md-8 offset-2">
+<div class="row mt-3 ">
+<div class="col-md-12 ">
 <h3 class="text-center mt-3 mb-3">Blogs List</h3>
 <table id="example" class="table table-striped table-bordered" style="width:100%">
 <thead>
@@ -109,7 +110,7 @@ while($row=mysqli_fetch_assoc($result))
 <form>
 <input type="hidden" value="<?php echo $row['id']; ?>" name="id">
 <input type="hidden" value="<?php echo $row['image']; ?>" name="image">
-<button type="submit"  name = "delete_sermon"  class="btn"><i class="fa fa-trash"></i></button>
+<button type="submit"  name = "delete_blog"  class="btn"><i class="fa fa-trash"></i></button>
 </form>
 </td>
 </tr>

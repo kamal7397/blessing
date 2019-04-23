@@ -44,8 +44,8 @@ include 'include/links.php';
 	if(isset($_GET['pg']))
 	{
 	switch($_GET['pg']){
-		case 'home':
-			echo "Welcome";
+		case 'welcome':
+			include 'pages/welcome.php';
 		break;
 		
 		case 'profile':

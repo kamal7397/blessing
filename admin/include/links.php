@@ -266,7 +266,7 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-	insertdata("events","date,title,description,image","'$date','$title','$description','".$_FILES["fileToUpload"]["name"]."'","index.php?pg=event&status=1","index.php?pg=event&status=0");
+	insertdata("events","date,image,title,description","'$date','".$_FILES["fileToUpload"]["name"]."','$title','$description'","index.php?pg=event&status=1","index.php?pg=event&status=0");
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
@@ -410,6 +410,13 @@ if(isset($_GET['delete_event']))
 {
 $id=$_GET['id'];
 deletedata("events","id=".$id,"index.php?pg=event");
+}
+
+
+if(isset($_GET['delete_blog']))
+{
+$id=$_GET['id'];
+deletedata("blogs","id=".$id,"index.php?pg=blog");
 }
 
 if(isset($_GET['delete_image']))
