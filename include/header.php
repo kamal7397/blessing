@@ -14,13 +14,13 @@
         <a class="nav-link" href="index.php?pg=home">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link scrollLink" href="#sermons">Sermons</a>
+        <a class="nav-link <?php if($_GET['pg']=="home") echo "scrollLink";?>" href="<?php if($_GET['pg']=="home") echo "#sermons"; else echo "index.php?pg=home#sermons"; ?>">Sermons</a>
       </li>
 	<li class="nav-item">
-        <a class="nav-link" href="#testimony">Testimony</a>
+        <a class="nav-link <?php if($_GET['pg']=="home") echo "scrollLink";?>" href="<?php if($_GET['pg']=="home") echo "#testimony"; else echo "index.php?pg=home#testimony"; ?>">Testimony</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link scrollLink"  href="#about">About</a>
+        <a class="nav-link <?php if($_GET['pg']=="home") echo "scrollLink";?>"  href="<?php if($_GET['pg']=="home") echo "#about"; else echo "index.php?pg=home#about"; ?>">About</a>
       </li>    
       <li class="nav-item">
         <a class="nav-link" href="index.php?pg=prayer">PrayerRequest</a>

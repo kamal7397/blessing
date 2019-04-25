@@ -34,8 +34,9 @@ include 'include/links.php';
 	if(!isset($_SESSION['username'])){
 		header('location:../index.php?pg=login');
 	}
+
 	if($_SESSION['type']=="admin"){
-		header('location:../admin/index.php?pg=profile');
+		header('location:../admin/index.php?pg=welcome');
 	}
 
 
@@ -73,7 +74,7 @@ include 'include/links.php';
 }
 	else
 	{
-		include 'pages/home.php';
+		include 'pages/welcome.php';
 	}
 		include 'include/footer.php';
 

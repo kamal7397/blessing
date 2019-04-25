@@ -12,7 +12,7 @@ latest sermons
 
 
 
-<div class="container owl-carousel" id="sermons">
+<div class="container owl-carousel" id="sermons" >
 
 	<?php
 		$query="SELECT * FROM sermons ORDER BY id DESC";

@@ -23,7 +23,8 @@ if(mysqli_num_rows($result)>0)
 	$_SESSION['name']=$row['name'];
 	$_SESSION['type']=$row['type'];
 	$_SESSION['userid']=$row['id'];
-	header('location:./users/index.php?pg=profile');	
+	header('location:./users/index.php?pg=welcome');	
+	
 	}
 	else
 	{

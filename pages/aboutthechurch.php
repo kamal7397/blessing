@@ -34,7 +34,8 @@ about the church
 <h3>Church Mission</h3>
 </div>
 <div class="card-body text-left f-s text-color3">
-<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto. </p>
+<p>"Prince Of Peace Mission" is about reaching people with the Good News about what Christ accomplished for all humanity at the cross. Everyone matters to God, and He wants to reveal His love for each individual. This is what the heart of God as our Father is all about. He intensely loves His creation and will even die for it to prove His love.
+ </p>
 </div>
 
 </div>

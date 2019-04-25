@@ -35,7 +35,7 @@ include 'include/links.php';
 		header('location:../index.php?pg=login');	
 	}
 	if($_SESSION['type']=="users"){
-		header('location:../users/index.php?pg=profile');
+		header('location:../users/index.php?pg=welcome');
 	}
 
 
