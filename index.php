@@ -180,7 +180,7 @@ $('#testimony').owlCarousel({
 $('#sermons').owlCarousel({
 loop:true,
 autoplay:true,
- autoplayTimeout:2000,
+ autoplayTimeout:1000,
     responsive:{
         0:{
             items:1

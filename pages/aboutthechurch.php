@@ -16,7 +16,7 @@ about the church
 <div class="card-image">
 <img src="assets/img/card1.jpg" alt="pic1" width="100%" height="270px" >
 </div>
-<div class="card-title mb-0 text-center">
+<div class="card-title mb-0 text-center mt-2">
 <h3>Our Community</h3>
 </div>
 <div class="card-body text-left f-s text-color3">
@@ -30,7 +30,7 @@ about the church
 <div class="card-image">
 <img src="assets/img/card2.jpg" alt="pic2" width="100%" height="270px">
 </div>
-<div class="card-title mb-0 text-center">
+<div class="card-title mb-0 text-center mt-2">
 <h3>Church Mission</h3>
 </div>
 <div class="card-body text-left f-s text-color3">
@@ -44,7 +44,7 @@ about the church
 <div class="card-image">
 <img src="assets/img/card3.jpg" alt="pic3" width="100%" height="270px">
 </div>
-<div class="card-title mb-0 text-center">
+<div class="card-title mb-0 text-center mt-2">
 <h3>Participate With Us</h3>
 </div>
 <div class="card-body text-left f-s text-color3">

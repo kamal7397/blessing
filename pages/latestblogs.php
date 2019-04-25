@@ -16,7 +16,7 @@ while($row=mysqli_fetch_assoc($result))
 ?>
 <div class="padding2 block item">
 
-<span class="bgcolor2 text-color1"><?php echo $row['date']; ?></span>
+<span class="bgcolor2 text-color1 px-2"><?php echo $row['date']; ?></span>
 <h4><?php echo $row['title']; ?></h4>
 <p><?php echo $row['description']; ?>
                                     </p>

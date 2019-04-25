@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 20, 2019 at 08:48 AM
--- Server version: 10.1.36-MariaDB
--- PHP Version: 7.2.11
+-- Generation Time: Apr 25, 2019 at 11:07 PM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.1.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -32,7 +32,7 @@ CREATE TABLE `blogs` (
   `id` int(11) NOT NULL,
   `date` varchar(20) NOT NULL,
   `title` varchar(20) NOT NULL,
-  `description` varchar(50) NOT NULL
+  `description` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -40,13 +40,9 @@ CREATE TABLE `blogs` (
 --
 
 INSERT INTO `blogs` (`id`, `date`, `title`, `description`) VALUES
-(1, '2019-03-10', 'rtreer', 'dsd'),
-(2, '2019-04-09', 'fdgfgghjgh', 'gcjhgynbcsauiyhdaksajkasjoiauajojlksjksljkfjs'),
-(3, '2019-04-09', 'fdgfgghjgh', 'gcjhgynbcsauiyhdaksajkasjoiauajojlksjksljkfjs'),
-(4, '2019-04-09', 'fdgfgghjgh', 'gcjhgynbcsauiyhdaksajkasjoiauajojlksjksljkfjs'),
-(5, '2019-04-09', 'fdgfgghjgh', 'gcjhgynbcsauiyhdaksajkasjoiauajojlksjksljkfjs'),
-(6, '2019-04-09', 'fdgfgghjgh', 'gcjhgynbcsauiyhdaksajkasjoiauajojlksjksljkfjs'),
-(7, '2019-04-09', 'fdgfgghjgh', 'gcjhgynbcsauiyhdaksajkasjoiauajojlksjksljkfjs');
+(4, '2019-04-03', 'John 1:1', 'From the first he was the Word, and the Word was in relation with God and was God.'),
+(5, '2019-04-04', 'Matthew 7:7', 'Make a request, and it will be answered; what you are searching for you will get; give the sign, and the door will be open to you:'),
+(6, '2019-04-05', 'Mark 9:1', 'And he said to them, Truly I say to you, There are some here who will have no taste of death till they see the kingdom of God come with power.');
 
 -- --------------------------------------------------------
 
@@ -61,13 +57,6 @@ CREATE TABLE `events` (
   `title` varchar(20) NOT NULL,
   `description` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `events`
---
-
-INSERT INTO `events` (`id`, `image`, `date`, `title`, `description`) VALUES
-(1, 'Penguins.jpg', '2019-04-17', 'fdgfg', 'gcjhgynbcsauiyhdaksajkasjoiauajojlksjksljkfjs');
 
 -- --------------------------------------------------------
 
@@ -86,7 +75,6 @@ CREATE TABLE `gallery` (
 --
 
 INSERT INTO `gallery` (`id`, `name`, `image`) VALUES
-(3, 'fd', 'Tulips.jpg'),
 (4, 'kamal', 'takechurch.jpg'),
 (5, 'kamal', 'blessing22.jpeg');
 
@@ -108,16 +96,6 @@ CREATE TABLE `prayer` (
   `status` varchar(15) NOT NULL DEFAULT 'Pending',
   `uid` varchar(9) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `prayer`
---
-
-INSERT INTO `prayer` (`id`, `name`, `dob`, `address`, `fname`, `email`, `contact`, `request`, `status`, `uid`) VALUES
-(4, 'kamaljeet', '2019-02-07', 'dfdsf', 'sdf', '', '26589652456', 'fewf', 'Pending', 'POPWA3645'),
-(5, 'kamal', '2019-02-01', 'shyhghfghhh', 'jkjkkjk', '', '23569856362', 'hgjhghjghjg', 'Pending', 'POPWA9692'),
-(6, 'kamal', '2019-03-15', 'sdsss', 'dssdad', '', '985698569', 'xhjgbbvfjhgdhgdhdghjdgsfdhwtrrrrrrrrrrrertgfuy', 'Pending', 'POPWA9749'),
-(7, 'pastor raj kumar', '2019-03-22', 'sdsfd', 'ewrfe', '', '9988558919', 'asjhgsjutydsgwsk', 'Pending', 'POPWA6044');
 
 -- --------------------------------------------------------
 
@@ -157,14 +135,6 @@ CREATE TABLE `sermons` (
   `image` varchar(30) NOT NULL,
   `link` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `sermons`
---
-
-INSERT INTO `sermons` (`id`, `name`, `author`, `date`, `image`, `link`) VALUES
-(11, 'kamal', 'kamal', '2019-04-20', 'Jellyfish.jpg', 'https://www.youtube.com/watch?v=t2OvfW7Qg60'),
-(12, 'kamalbnbndc', 'kamaljeet', '2019-04-13', 'Koala.jpg', 'https://www.youtube.com/watch?v=t2OvfW7Qg60');
 
 -- --------------------------------------------------------
 
@@ -332,13 +302,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `blogs`
 --
 ALTER TABLE `blogs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `gallery`
@@ -350,7 +320,7 @@ ALTER TABLE `gallery`
 -- AUTO_INCREMENT for table `prayer`
 --
 ALTER TABLE `prayer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `records`
@@ -362,7 +332,7 @@ ALTER TABLE `records`
 -- AUTO_INCREMENT for table `sermons`
 --
 ALTER TABLE `sermons`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `temp_records`
