@@ -5,7 +5,7 @@ Welcome Pastor Raj Kumar
 </h3>
 </div>
 </div>
-<div class="row mt-2">
+<div class="row mt-2 mb-2">
 <div class="col-md-12 text-center">
 <img src="../assets/img/raj.jpg" width="30%">
 </div>

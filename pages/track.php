@@ -1,7 +1,7 @@
 <div class="container sec">
-<div class="row">
-<div class="col-md-12 text-center text-primary">
-<p>If you want to donate for the church please signup and register your details with unique id and password. After that with that particular id Login here and donate. Also for the Future donation remember that id so that you will be able for the further donation.</p>
+<div class="row mt-5">
+<div class="col-md-12 text-center text-justify">
+<p>Fill the id that has been generated at the time of registering your prayer request and check you prayer request and also you can make changes in the form of request. </p>
 </div>
 </div>
 <div class="row mt-5 mb-5">

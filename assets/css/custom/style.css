@@ -291,12 +291,13 @@ position:relative;
 .section-heading::after
 {
 content:'';
-height:1px;
-width:127px;
-background-color:#d8d8d8;
-position:absolute;
-top:53px;
-left:44%;
+    height: 1px;
+    width: 37px;
+    background-color: #8ec92f;
+    position: absolute;
+    top: 53px;
+    left: 48%;
+
 }
 
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2019 at 11:07 PM
+-- Generation Time: May 01, 2019 at 12:01 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.1.26
 
@@ -58,6 +58,13 @@ CREATE TABLE `events` (
   `description` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `events`
+--
+
+INSERT INTO `events` (`id`, `image`, `date`, `title`, `description`) VALUES
+(1, '55882277_1743279899150871_646215500841353216_n.jpg', '2019-04-07', 'Sunday Meeting', 'From the first he was the Word, and the Word was in relation with God and was God.');
+
 -- --------------------------------------------------------
 
 --
@@ -75,8 +82,9 @@ CREATE TABLE `gallery` (
 --
 
 INSERT INTO `gallery` (`id`, `name`, `image`) VALUES
-(4, 'kamal', 'takechurch.jpg'),
-(5, 'kamal', 'blessing22.jpeg');
+(5, 'kamal', 'blessing22.jpeg'),
+(11, 'kamal', '502014285_univ_lsr_xl.jpg'),
+(12, 'kamal', 'Jesus-image.jpg');
 
 -- --------------------------------------------------------
 
@@ -96,6 +104,13 @@ CREATE TABLE `prayer` (
   `status` varchar(15) NOT NULL DEFAULT 'Pending',
   `uid` varchar(9) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `prayer`
+--
+
+INSERT INTO `prayer` (`id`, `name`, `dob`, `address`, `fname`, `email`, `contact`, `request`, `status`, `uid`) VALUES
+(1, 'rinku', '2019-04-18', 'fghfhfd', 'gfhgfh', '', '985698566', 'cxgfdghgfhgfht', 'Completed', 'POPWA9958');
 
 -- --------------------------------------------------------
 
@@ -119,7 +134,8 @@ CREATE TABLE `records` (
 INSERT INTO `records` (`id`, `amount`, `date`, `purpose`, `type`, `userid`) VALUES
 (4, '1000', '2019-02-19', 'funds', 'donation', 3),
 (5, '1000', '2019-02-18', 'const', 'donation', 3),
-(7, '3000', '2019-04-20', 'construction', 'donation', 1);
+(7, '3000', '2019-04-20', 'construction', 'donation', 1),
+(8, '5000', '2019-04-26', 'construction', 'donation', 4);
 
 -- --------------------------------------------------------
 
@@ -129,12 +145,21 @@ INSERT INTO `records` (`id`, `amount`, `date`, `purpose`, `type`, `userid`) VALU
 
 CREATE TABLE `sermons` (
   `id` int(11) NOT NULL,
-  `name` varchar(20) NOT NULL,
+  `name` varchar(50) NOT NULL,
   `author` varchar(20) NOT NULL,
   `date` varchar(20) NOT NULL,
   `image` varchar(30) NOT NULL,
   `link` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sermons`
+--
+
+INSERT INTO `sermons` (`id`, `name`, `author`, `date`, `image`, `link`) VALUES
+(2, 'Kook Papihe Vali', 'Sukhwinder Singh', '2019-04-05', '584beccda62aaa830c43eda3.png', 'https://www.youtube.com/watch?v=EXSFK5ZFTCc'),
+(5, 'Ban jo Khuda de lokko', 'Hardeep Singh', '2019-04-06', 'christian_cross_PNG14.png', 'https://www.youtube.com/watch?v=pRCKA0xkQ_Y'),
+(6, 'Karie Duaa sare', 'Pastor Raj Kumar', '2019-04-07', '88510910b3015f7e557f594323e9dc', 'https://www.youtube.com/watch?v=ZerR9hbPpL0');
 
 -- --------------------------------------------------------
 
@@ -156,7 +181,9 @@ CREATE TABLE `temp_records` (
 --
 
 INSERT INTO `temp_records` (`id`, `amount`, `date`, `purpose`, `userid`, `status`) VALUES
-(1, '3000', '2019-04-20', 'construction', 1, 'accepted');
+(1, '3000', '2019-04-20', 'construction', 1, 'accepted'),
+(2, '5000', '2019-04-26', 'construction', 4, 'accepted'),
+(3, '15000', '2019-04-05', 'consy', 4, 'accepted');
 
 -- --------------------------------------------------------
 
@@ -166,7 +193,7 @@ INSERT INTO `temp_records` (`id`, `amount`, `date`, `purpose`, `userid`, `status
 
 CREATE TABLE `testimony` (
   `id` int(11) NOT NULL,
-  `name` varchar(20) NOT NULL,
+  `name` varchar(50) NOT NULL,
   `author` varchar(20) NOT NULL,
   `date` varchar(20) NOT NULL,
   `image` varchar(30) NOT NULL,
@@ -178,7 +205,7 @@ CREATE TABLE `testimony` (
 --
 
 INSERT INTO `testimony` (`id`, `name`, `author`, `date`, `image`, `link`) VALUES
-(8, 'kamal', 'kamal', '2019-04-06', 'Chrysanthemum.jpg', 'https://www.youtube.com/watch?v=t2OvfW7Qg60');
+(10, 'Sister Recovering From The Paralise Attack After T', 'Pastor Raj Kumar', '2019-04-07', 'images (2).jpg', 'https://www.youtube.com/watch?v=tzwJrPGju5M');
 
 -- --------------------------------------------------------
 
@@ -203,7 +230,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `name`, `username`, `password`, `address`, `contact`, `type`) VALUES
 (1, 'kamal', 'kamaljeet', 'aa63b0d5d950361c05012235ab520512', 'njjmhjkhkl', '9856985694', 'users'),
 (2, 'honey', 'honey', 'b60eb83bf533eecf1bde65940925a981', 'hghsdghsg', '9856985698', 'users'),
-(3, 'Admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin', '8888888888', 'admin');
+(3, 'Admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin', '9988558919', 'admin'),
+(4, 'rinku', 'rinku', 'f12b213a6d2480d97fb5068fdc39de21', 'dfdfdsfs', '985698566', 'users');
 
 -- --------------------------------------------------------
 
@@ -308,49 +336,49 @@ ALTER TABLE `blogs`
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `prayer`
 --
 ALTER TABLE `prayer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `records`
 --
 ALTER TABLE `records`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `sermons`
 --
 ALTER TABLE `sermons`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `temp_records`
 --
 ALTER TABLE `temp_records`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `testimony`
 --
 ALTER TABLE `testimony`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
