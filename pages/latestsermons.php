@@ -31,6 +31,7 @@ latest sermons
 		while($row=mysqli_fetch_assoc($result))
 		{
 	?>
+
 <div class="row mb-2 pb-2 b-bottom">
 <div class="col-md-2">
 <img src="assets/img/sermons/<?php echo $row['image']; ?>" alt="pic3" width="100%" height="140px">

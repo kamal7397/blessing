@@ -159,7 +159,7 @@ loop:true,
 $('#testimony').owlCarousel({
 	loop:true,	
 	autoplay:true,
-	autoplayTimeout:1000,
+	autoplayTimeout:2000,
 	autoplayHoverPause:true,
 
     responsive:{
@@ -180,7 +180,7 @@ $('#testimony').owlCarousel({
 $('#sermons').owlCarousel({
 loop:true,
 autoplay:true,
- autoplayTimeout:1000,
+ autoplayTimeout:2000,
     responsive:{
         0:{
             items:1
@@ -206,6 +206,8 @@ $('.stop').on('click',function(){
 
 $('#second').owlCarousel({
 loop:true,
+ autoplay:true,
+ autoplayTimeout:2000,
     responsive:{
         0:{
             items:1

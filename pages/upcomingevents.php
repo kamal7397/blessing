@@ -8,12 +8,13 @@ images
 <p class="p1">LATEST</p>
 <h2 class="p2">EVENTS</h2>
 </div>
+
+<div class="col-md-9 px-0 owl-carousel" id="first">
 <?php
 $result=selectdata("*","events");
 while($row=mysqli_fetch_assoc($result))
 {
 ?>
-<div class="col-md-9 px-0 owl-carousel" id="first">
 <div class="px-0 item">
 <img src="assets/img/events/<?php echo $row['image']; ?>" alt="pic1" width="100%" height="250px">
 <div class="bgcolor4 text-center position-block">

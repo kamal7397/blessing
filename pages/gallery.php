@@ -16,7 +16,7 @@ $result=selectdata("*","gallery");
 while($row=mysqli_fetch_assoc($result))
 {
 ?>
-	<div class="col-md-4 mb-3 mr-5">
+	<div class="col-md-4 mb-3 ">
 	<img src="assets/img/gallery/<?php echo $row['image']; ?>" alt="image" >
 	</div>
 <?php

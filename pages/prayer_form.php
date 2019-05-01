@@ -34,12 +34,12 @@ if(isset($_GET['status']))
 }
 ?>
 
-<div class="row mt-5 mb-5">
+<div class="row mt-5 alert alert-info">
 <div class="col-md-12">
-<p class="text-center text-justify">For registering your prayer request fill the detailes in the form. After the submission of the form automatically your unique id has been generted. Note that id for tracking your prayer request status so that you will be able to know about the request is completed or not. This unique id has also been send at your particular mail id that you have registered in the form. with that id you can make changes in the form of request. </p>
+<p class="text-left ">After the submission of the form, your UID will be generated. <br/><strong>Note that UID, for further tracking your prayer request status</strong>. UID will also be mailed to your registered mail id.</p>
 </div>
 </div>
-<div class="row mt-5 mb-5">
+<div class="row mt-2 mb-5">
 <div class="col-md-12">
 <form method="post">
 <h2 class="text-center  mb-5  "><i class="fas fa-hands mr-2"></i>Request for Prayer</h2>

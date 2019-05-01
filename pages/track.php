@@ -1,10 +1,10 @@
 <div class="container sec">
-<div class="row mt-5">
-<div class="col-md-12 text-center text-justify">
-<p>Fill the id that has been generated at the time of registering your prayer request and check you prayer request and also you can make changes in the form of request. </p>
+<div class="row mt-5 alert alert-info">
+<div class="col-md-12 text-left ">
+<p><strong>Kindly fill the UID that was provided at the time of prayer registration</strong>.</p>
 </div>
 </div>
-<div class="row mt-5 mb-5">
+<div class="row mt-2 mb-5">
 <div class="col-md-3">
 </div>
 	<div class="col-md-6">
@@ -20,7 +20,7 @@
 	</div>
 	</div>
 	<div class="form-group">
-		<input type="submit" name="track_prayer" value="Track" class="form-control btn btn-primary">
+		<input type="submit" name="track_prayer" value="Track" class="form-control btn btn-primary mb-5">
 	</div>
 	</div>
 <div class="col-md-3">

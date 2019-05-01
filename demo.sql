@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 01, 2019 at 12:01 AM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.1.26
+-- Generation Time: May 01, 2019 at 02:37 PM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.2.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -63,7 +63,9 @@ CREATE TABLE `events` (
 --
 
 INSERT INTO `events` (`id`, `image`, `date`, `title`, `description`) VALUES
-(1, '55882277_1743279899150871_646215500841353216_n.jpg', '2019-04-07', 'Sunday Meeting', 'From the first he was the Word, and the Word was in relation with God and was God.');
+(7, '1.jpg', '2019-05-16', 'Worship', 'kl.k;k'),
+(8, '3.jpg', '2019-05-15', 'Worship2', 'klkk'),
+(9, '2.jpg', '2019-05-12', 'Worship3', 'lllllllll');
 
 -- --------------------------------------------------------
 
@@ -158,8 +160,9 @@ CREATE TABLE `sermons` (
 
 INSERT INTO `sermons` (`id`, `name`, `author`, `date`, `image`, `link`) VALUES
 (2, 'Kook Papihe Vali', 'Sukhwinder Singh', '2019-04-05', '584beccda62aaa830c43eda3.png', 'https://www.youtube.com/watch?v=EXSFK5ZFTCc'),
-(5, 'Ban jo Khuda de lokko', 'Hardeep Singh', '2019-04-06', 'christian_cross_PNG14.png', 'https://www.youtube.com/watch?v=pRCKA0xkQ_Y'),
-(6, 'Karie Duaa sare', 'Pastor Raj Kumar', '2019-04-07', '88510910b3015f7e557f594323e9dc', 'https://www.youtube.com/watch?v=ZerR9hbPpL0');
+(5, 'Ban jo Khuda de lokko', 'Hardeep Singh', '2019-04-06', 'Penguins.jpg', 'https://www.youtube.com/watch?v=pRCKA0xkQ_Y'),
+(6, 'Karie Duaa sare', 'Pastor Raj Kumar', '2019-04-07', 'Jellyfish.jpg', 'https://www.youtube.com/watch?v=ZerR9hbPpL0'),
+(7, 'Ban jo Khuda de lokk', 'dasd', '2019-05-17', '5.jpg', 'das');
 
 -- --------------------------------------------------------
 
@@ -336,7 +339,7 @@ ALTER TABLE `blogs`
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `gallery`
@@ -360,7 +363,7 @@ ALTER TABLE `records`
 -- AUTO_INCREMENT for table `sermons`
 --
 ALTER TABLE `sermons`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `temp_records`

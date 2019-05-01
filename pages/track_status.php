@@ -19,7 +19,7 @@ $row=mysqli_fetch_assoc($result);
 	<span class="input-group-text">
 <i class="fas fa-user"></i></span>
 </div>
-<input type="text" name="name" placeholder="Name" required="required" class="form-control" value="<?php echo $row['name']; ?>">
+<input type="text" name="name" placeholder="Name" required="required" class="form-control" value="<?php echo $row['name']; ?>" disabled>
 </div>
 </div>
 
@@ -32,7 +32,7 @@ $row=mysqli_fetch_assoc($result);
 	<span class="input-group-text">
 <i class="far fa-calendar-alt"></i></span>
 </div>
-<input placeholder="DOB" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" name="dob" value="<?php echo $row['dob']; ?>">
+<input placeholder="DOB" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" name="dob" value="<?php echo $row['dob']; ?>" disabled>
 </div>
 </div>
 
@@ -44,7 +44,7 @@ $row=mysqli_fetch_assoc($result);
 	<span class="input-group-text">
 <i class="fas fa-house-damage"></i></span>
 </div>
-<input type="text" name="address" placeholder="Address" required="required" class="form-control" value="<?php echo $row['address']; ?>">
+<input type="text" name="address" placeholder="Address" required="required" class="form-control" value="<?php echo $row['address']; ?>" disabled>
 </div>
 </div>
 
@@ -55,7 +55,7 @@ $row=mysqli_fetch_assoc($result);
 	<span class="input-group-text">
 <i class="fas fa-user-tie"></i>
 </div>
-<input type="text" name="fname" placeholder="Father's Name" required="required" class="form-control" value="<?php echo $row['fname']; ?>">
+<input type="text" name="fname" placeholder="Father's Name" required="required" class="form-control" value="<?php echo $row['fname']; ?>" disabled>
 </div>
 </div>
 
@@ -67,17 +67,16 @@ $row=mysqli_fetch_assoc($result);
 	<span class="input-group-text">
 <i class="fas fa-phone fa-flip-horizontal"></i></span>
 </div>
-<input type="number" name="contact" placeholder="Contact" required="required" class="form-control" value="<?php echo $row['contact']; ?>">
+<input type="number" name="contact" placeholder="Contact" required="required" class="form-control" value="<?php echo $row['contact']; ?>" disabled>
 </div>
 </div>
 
 
 <div class="form-group">
-<textarea class="form-control" name="request" rows="10" placeholder="Request"><?php echo $row['request']; ?></textarea>
+<textarea class="form-control" name="request" rows="10" placeholder="Request" disabled><?php echo $row['request']; ?></textarea>
 </div>
 
 
-<input type="submit" name="exit" value="Exit" class="btn btn-info btn-block">
 
 </form>
 </div>
